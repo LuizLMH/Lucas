@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background-color: beige;
 }
 
 .pages,
@@ -481,7 +482,7 @@ a {
 }
 
 .pagina2 {
-    background-color: rgb(226, 223, 223);
+    /* background-color: rgb(226, 223, 223); */
 }
 
 .noticias {

@@ -34,85 +34,37 @@
             <tr>
                 <th>Turmas</th>
                 <th>Semestre</th>
+                <th>Carga Horária</th>
                 <th>Turno</th>
                 <th>Professor</th>
                 <th>Status</th>
                 <th>Ações</th>
             </tr>
-            <tr>
-                <td>Informática Básica - A</td>
-                <td>2026/01</td>
-                <td>Noturno</td>
-                <td>Maria Fernanda</td>
-                <td id="ativo">Ativa</td>
-                <td>
-                    <button type="button" id="mais">Ver Mais</button>
-                    <button type="button" id="edit">Editar</button>
-                    <button type="button" id="zero">Excluir</button>
-                </td>
-            </tr>
-            <tr>
-                <td>Banco de Dados - B</td>
-                <td>2026/01</td>
-                <td>Matutino</td>
-                <td>Joâo Batista</td>
-                <td id="ativo">Ativa</td>
-                <td>
-                    <button type="button" id="mais">Ver Mais</button>
-                    <button type="button" id="edit">Editar</button>
-                    <button type="button" id="zero">Excluir</button>
-                </td>
-            </tr>
-            <tr>
-                <td>Desenvolvimento Web - C</td>
-                <td>2026/01</td>
-                <td>Noturno</td>
-                <td>Carlos Henrique</td>
-                <td id="inativo">Encerrada</td>
-                <td>
-                    <button type="button" id="mais">Ver Mais</button>
-                    <button type="button" id="edit">Editar</button>
-                    <button type="button" id="zero">Excluir</button>
-                </td>
-            </tr>
-            <tr>
-                <td>Desenvolvimento Web - D</td>
-                <td>2026/01</td>
-                <td>Noturno</td>
-                <td>Maria Fernanda</td>
-                <td id="ativo">Ativa</td>
-                <td>
-                    <button onclick="window.location.href='pagina8.php'" id="mais">
-                        Ver mais
-                    </button>
-                    <button type="button" id="edit">Editar</button>
-                    <button type="button" id="zero">Excluir</button>
-                </td>
-            </tr>
+            <?php
+            include 'conecta.php';
+            $sql = "SELECT * FROM cadastrosCursos";
+            $resultado = mysqli_query($conexao, $sql);
+            if (mysqli_num_rows($resultado) > 0) {
+                while ($linha = mysqli_fetch_array($resultado)) {
+            ?>
+                    <tr>
+                        <td><?php $linha["nomeCurso"]; ?> </td>
+                        <td>2026/01</td>
+                        <td> <?php $linha["cargaH"]; ?> </td>
+                        <td>Noturno</td>
+                        <td>Maria Fernanda</td>
+                        <td id="ativo">Ativa</td>
+                        <td>
+                            <button type="button" id="mais">Ver Mais</button>
+                            <button type="button" id="edit">Editar</button>
+                            <button type="button" id="zero">Excluir</button>
+                        </td>
+                    </tr>
         </table>
-    </div>
-    <div class="paginas">
-        <form action="#" method="post">
-            <!-- <table>
-                <tr>
-                    <td>
-                        <input type="button" value="Anterior" id="antes">
-                    </td>
-                    <td>
-                        <h1 id="atual">1</h1>
-                    </td>
-                    <td>
-                        <h1>2</h1>
-                    </td>
-                    <td>
-                        <h1>3</h1>
-                    </td>
-                    <td>
-                        <input type="button" value="Próxima" id="depois">
-                    </td>
-                </tr>
-            </table> -->
-        </form>
+<?php
+                }
+            }
+?>
     </div>
 </body>
 

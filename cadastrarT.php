@@ -23,24 +23,28 @@
     </div>
     <h1>Cadastrar Turma</h1>
     <p>Dados da Turma</p>
-    <form action="pagina.php" method="post">
+    <form action="inserirT.php" method="post">
         <div class="cadpai">
             <div class="cadT">
                 <label for="turma">Turma</label>
-                <input type="text" Nome da Turma placeholder="Nome da Turma" id="turma">
+                <input type="text" name="nomeT"  placeholder="Nome da Turma" id="turma">
                 <label for="Ano">Ano/Semestre</label>
                 <input type="text" name="ano" id="Ano" placeholder="Ano/Semestre">
                 <label for="Turno">Selecione o Turno</label>
                 <select name="Turno" id="Turno">
                     <option>Selecione o Turno</option>
-                    <option value="Turno">Manhã</option>
-                    <option value="Turno">Tarde</option>
-                    <option value="Turno">Noite</option>
+                    <option value="1">Manhã</option>
+                    <option value="2">Tarde</option>
+                    <option value="3">Noite</option>
                 </select>
+                <label for="curso">Nome do Curso</label>
+                <input type="text" name="curso" id="curso" placeholder="Nome do Curso">
             </div>
             <div class="cadT2">
-                <label for="data">Data de Início</label>
-                <input type="date" name="Data de Inicio" id="data" value="Data De Início">
+                <label for="dataI">Data de Início</label>
+                <input type="date" name="dataI" id="dataI" value="Data De Início">
+                <label for="dataT">Data de Término</label>
+                <input type="date" name="dataT" id="dataT" value="Data De Término">
                 <label for="prof">Professor Responsável</label>
                 <input type="text" name="p" id="prof" placeholder="Professor Responsável">
                 <label for="Sala">Sala</label>
