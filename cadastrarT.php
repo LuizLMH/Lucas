@@ -27,7 +27,7 @@
         <div class="cadpai">
             <div class="cadT">
                 <label for="turma">Turma</label>
-                <input type="text" name="nomeT"  placeholder="Nome da Turma" id="turma">
+                <input type="text" name="nomeT" placeholder="Nome da Turma" id="turma">
                 <label for="Ano">Ano/Semestre</label>
                 <input type="text" name="ano" id="Ano" placeholder="Ano/Semestre">
                 <label for="Turno">Selecione o Turno</label>
