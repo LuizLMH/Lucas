@@ -16,7 +16,7 @@
     $curso = $_POST["curso"];
     $turno=$_POST["Turno"];
     $dataI=$_POST["dataI"];
-    $sql = "INSERT INTO cadTurmas (nomeTurma, curso, turno, inicio) VALUES ('$nomeT', '$curso','$turno', '$dataI')";
+    $sql = "INSERT INTO turmas (nomeTurma, curso, turno, inicio) VALUES ('$nomeT', '$curso','$turno', '$dataI')";
     if(mysqli_query($conexao, $sql)){
         echo "Dados inseridos";
     }else{

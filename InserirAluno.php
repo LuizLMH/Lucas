@@ -23,7 +23,7 @@
     $numero=$_POST["numero"];
     $cidade=$_POST["cidade"];
     $turma=$_POST["select"];
-    $sql = "INSERT INTO cadAlunos (nomeCompleto, dataNascimento, telefone, cpf, nomePai, nomeMae, turma) VALUES ('$nome', '$dataN', '$telefone', '$cpf', '$nomeP', '$nomeM', '$turma')";
+    $sql = "INSERT INTO alunos (nomeCompleto, dataNascimento, telefone, cpf, nomePai, nomeMae, turma) VALUES ('$nome', '$dataN', '$telefone', '$cpf', '$nomeP', '$nomeM', '$turma')";
     if(mysqli_query($conexao, $sql)){
         echo "Dados inseridos";
     }else{

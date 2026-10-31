@@ -42,7 +42,7 @@
             </tr>
             <?php
             include 'conecta.php';
-            $sql = "SELECT * FROM cadastrosCursos";
+            $sql = "SELECT * FROM cursos";
             $resultado = mysqli_query($conexao, $sql);
             if (mysqli_num_rows($resultado) > 0) {
                 while ($linha = mysqli_fetch_array($resultado)) {
