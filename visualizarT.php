@@ -13,12 +13,16 @@
         <h1 id="tb">Sistema</h1>
         <h1 id="to">Acadêmico</h1>
     </div>
-    <div class="pages7">
+    <div class="pages7 ">
         <a href="inicio.php" class="p2">Dashboard</a>
         <a href="cadastrarAl.php" class="p3">Cadastrar Alunos</a>
         <a href="visualizarAl.php" class="p4">Visualizar Alunos</a>
         <a href="cadastrarT.php" class="p6">Cadastrar Turmas</a>
         <a href="visualizarT.php" class="p7">Visualizar Turmas</a>
+        <a href="cadastrarP.php" class="p9">Cadastrar Professores</a>
+        <a href="visualizarP.php" class="p10">Visualizar Professores</a>
+        <a href="cadastrarC.php" class="p11">Cadastrar Cursos</a>
+        <a href="visualizarC.php" class="p12">Visualizar Cursos</a>
         <a href="index.php" id="sair">sair</a>
     </div>
     <div class="verturmas">
@@ -32,27 +36,28 @@
     <div class="tabela">
         <table>
             <tr>
-                <th>Turmas</th>
-                <th>Semestre</th>
-                <th>Carga Horária</th>
+                <th>Nome da Turma</th>
+                <!-- <th>Semestre</th> -->
                 <th>Turno</th>
+                <th>Data de Início</th>
+                <th>Data de Término</th>
                 <th>Professor</th>
                 <th>Status</th>
                 <th>Ações</th>
             </tr>
             <?php
             include 'conecta.php';
-            $sql = "SELECT * FROM cursos";
+            $sql = "SELECT * FROM turmas";
             $resultado = mysqli_query($conexao, $sql);
             if (mysqli_num_rows($resultado) > 0) {
                 while ($linha = mysqli_fetch_array($resultado)) {
             ?>
                     <tr>
-                        <td><?php $linha["nomeCurso"]; ?> </td>
-                        <td>2026/01</td>
-                        <td> <?php $linha["cargaH"]; ?> </td>
-                        <td>Noturno</td>
-                        <td>Maria Fernanda</td>
+                        <td><?php echo $linha["nomeTurma"]; ?> </td>
+                        <td><?php echo $linha["turno"]; ?></td>
+                        <td><?php echo $linha["inicio"]; ?> </td>
+                        <td><?php echo $linha["termino"]; ?></td>
+                        <td><?php echo $linha["professor"]; ?></td>
                         <td id="ativo">Ativa</td>
                         <td>
                             <button type="button" id="mais">Ver Mais</button>
@@ -60,11 +65,11 @@
                             <button type="button" id="zero">Excluir</button>
                         </td>
                     </tr>
-        </table>
-<?php
+            <?php
                 }
             }
-?>
+            ?>
+        </table>
     </div>
 </body>
 

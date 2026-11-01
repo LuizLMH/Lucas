@@ -14,6 +14,9 @@ body {
 .pages8,
 .pages3,
 .pages4,
+.pages9,
+.pages10,
+.pages11,
 #sair {
     color: red;
 }
@@ -622,6 +625,96 @@ a {
     color: black;
 }
 
+.pages9 a {
+    font-size: 15px;
+    margin-right: 1%;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    justify-content: flex-end;
+    transition: all 0.3s ease;
+}
+
+.pages9 a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+.pages9 .p9 {
+    scale: 1.04;
+    text-decoration: underline;
+    color: orange;
+}
+
+.pages9 .p9:hover {
+    scale: 1;
+    color: black;
+}
+
+.pages10 a {
+    font-size: 15px;
+    margin-right: 1%;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    justify-content: flex-end;
+    transition: all 0.3s ease;
+}
+
+.pages10 a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+.pages10 .p10 {
+    scale: 1.04;
+    text-decoration: underline;
+    color: orange;
+}
+
+.pages10 .p10:hover {
+    scale: 1;
+    color: black;
+}
+
+.pages10 {
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+}
+
+.pages11 {
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+}
+
+.pages11 a {
+    font-size: 15px;
+    margin-right: 1%;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    justify-content: flex-end;
+    transition: all 0.3s ease;
+}
+
+.pages11 a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+.pages11 .p11 {
+    scale: 1.04;
+    text-decoration: underline;
+    color: orange;
+}
+
+.pages11 .p11:hover {
+    scale: 1;
+    color: black;
+}
+
 .pages3 {
     display: flex;
     justify-content: right;
@@ -682,6 +775,38 @@ a {
 }
 
 .pages4 .p4:hover {
+    scale: 1;
+    color: black;
+}
+
+.pages12 {
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+}
+
+.pages12 a {
+    font-size: 15px;
+    margin-right: 1%;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    justify-content: flex-end;
+    transition: all 0.3s ease;
+}
+
+.pages12 a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+.pages12 .p12 {
+    scale: 1.04;
+    text-decoration: underline;
+    color: orange;
+}
+
+.pages12 .p12:hover {
     scale: 1;
     color: black;
 }
@@ -1190,4 +1315,49 @@ label {
 
 .Ecentro input[type="password"]:focus::placeholder {
     color: orange;
+}
+
+
+/* A partir daqui são as páginas de inserir informações */
+.inserirP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.inserirF {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 35%;
+    height: 5%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px orange;
+}
+
+.inserirF a {
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 40px;
+    box-shadow: 0 0 10px black;
+    text-decoration: none;
+    transition: all .2s ease;
+}
+.inserirF a:hover{
+background-color: #ddd;
+}
+.inserirF p{
+    font-size: 25px;
+    color: orange;
+    margin: 0;
+    padding: 0;
+}
+
+.r3 :hover{
+ background-color: red;
 }
