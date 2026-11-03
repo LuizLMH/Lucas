@@ -1348,16 +1348,42 @@ label {
     text-decoration: none;
     transition: all .2s ease;
 }
-.inserirF a:hover{
-background-color: #ddd;
+
+.inserirF a:hover {
+    background-color: #ddd;
 }
-.inserirF p{
+
+.inserirF p {
     font-size: 25px;
     color: orange;
     margin: 0;
     padding: 0;
 }
 
-.r3 :hover{
- background-color: red;
+.r3 :hover {
+    background-color: red;
+}
+
+.userP {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.userF {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px red;
+    background-color: rgba(128, 128, 128, 0.753);
+    border-radius: 20px;
+    text-align: center;
+    width: 30%;
+    height: 40%;
+}
+
+.userF p {
+    color: rgb(231, 87, 87);
 }

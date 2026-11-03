@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esqueci a senha</title>
+    <title>Cadastro</title>
     <link rel="stylesheet" href="arquivo.css">
 </head>
 
 <body id="globo">
         <div class="alinhar">
             <div class="Ecentro">
-                <h1>Redefinição de senha</h1>
-                <form action="index.php" method="post">
-                    <input type="password" name="senha" id="senha" placeholder="Crie sua nova senha">
-                    <input type="password" name="senha" id="senha" placeholder="Confirme sua senha">
+                <h1>Crie sua conta</h1>
+                <form action="inserirU.php" method="post">
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome de usuário">
+                    <input type="text" name="senha" id="senha" placeholder="Crie sua senha">
                     <input type="submit" value="Confirmar">
                     <input type="reset" value="Cancelar">
                 </form>

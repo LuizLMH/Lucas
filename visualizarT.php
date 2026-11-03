@@ -37,7 +37,6 @@
         <table>
             <tr>
                 <th>Nome da Turma</th>
-                <!-- <th>Semestre</th> -->
                 <th>Turno</th>
                 <th>Data de Início</th>
                 <th>Data de Término</th>

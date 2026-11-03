@@ -1,0 +1,40 @@
+show databases;
+create database escolaEM;
+use escolaEM;
+drop database escolaEM;
+create table
+  cursos(
+    idCursos int auto_increment primary key,
+    nomeC varchar(50) not null,
+    cargaH varchar(50) not null
+  );
+create table
+  turmas(
+    idTurmas int auto_increment primary key,
+    nomeTurma varchar(50) not null unique,
+    curso varchar(50) not null,
+    turno varchar(50) not null,
+    inicio varchar(50) not null,
+    termino varchar(50) not null,
+    professor varchar(50) not null
+  );
+create table
+  alunos(
+    idAlunos int auto_increment primary key,
+    nomeCompleto varchar(100) not null,
+    dataNascimento varchar(30) not null,
+    telefone varchar(25) not null,
+    cpf varchar(30) not null unique,
+    nomePai varchar(100) not null,
+    nomeMae varchar(100) not null,
+    turma varchar(30) not null
+  );
+create table
+  professores(
+    idProfessores int auto_increment primary key,
+    nomeP varchar(100) not null,
+    dataNP varchar(20) not null,
+    telefoneP varchar(30) not null,
+    cpfP varchar(50) not null unique,
+    salario decimal(10, 2) not null
+  );
