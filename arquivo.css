@@ -1,7 +1,7 @@
 body {
     font-weight: 950;
     font-family: Inter;
-    user-select: none;
+    user-select: text;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -126,20 +126,28 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
     width: 40%;
-    height: 410px;
+    height: 100%;
     margin-left: 10%;
     padding: 100px;
 }
 
 .formulariodireita {
+    background-color: transparent;
     width: 100%;
-    height: 120%;
+    border: 2px double orange;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
     display: flex;
     flex-direction: column;
     transition: all 1s ease;
 }
-
+.formulariodireita:hover{
+    background-color: rgba(128, 128, 128, 0.418);
+}
 .direita {
     animation-name: entrada;
     animation-duration: 3s;
@@ -163,7 +171,8 @@ p {
 
 .formulariodireita h1,
 p {
-    text-align: left;
+
+    text-align: center;
     color: black;
 }
 
@@ -1065,8 +1074,6 @@ a {
 }
 
 #l2 {
-    /* border-top: double 3px orange;
-    border-bottom: double 3px orange;*/
     text-align: center;
     text-decoration: underline;
     text-decoration-color: orange;

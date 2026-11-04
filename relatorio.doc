@@ -8,8 +8,8 @@ create table
     nomeC varchar(50) not null,
     cargaH varchar(50) not null
   );
-create table
-  turmas(
+  
+create tableturmas(
     idTurmas int auto_increment primary key,
     nomeTurma varchar(50) not null unique,
     curso varchar(50) not null,
@@ -18,8 +18,8 @@ create table
     termino varchar(50) not null,
     professor varchar(50) not null
   );
-create table
-  alunos(
+
+create table alunos(
     idAlunos int auto_increment primary key,
     nomeCompleto varchar(100) not null,
     dataNascimento varchar(30) not null,
@@ -29,8 +29,8 @@ create table
     nomeMae varchar(100) not null,
     turma varchar(30) not null
   );
-create table
-  professores(
+
+create table professores(
     idProfessores int auto_increment primary key,
     nomeP varchar(100) not null,
     dataNP varchar(20) not null,
@@ -38,3 +38,9 @@ create table
     cpfP varchar(50) not null unique,
     salario decimal(10, 2) not null
   );
+
+   create table acesso(
+    idAcesso int Auto_increment primary key,
+    nome varchar(500) not null unique,
+    senha varchar(500) not nul unique
+   );
