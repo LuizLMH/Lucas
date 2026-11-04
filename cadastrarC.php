@@ -31,9 +31,9 @@
         <div class="cadpai">
             <div class="cadT">
                 <label for="nomeC">Nome do Curso</label>
-                <input type="text" name="nomeC" placeholder="Nome do Curso" id="nomeC">
+                <input type="text" name="nomeC" placeholder="Nome do Curso" id="nomeC" required>
                 <label for="cargaH">Carga Horária</label>
-                <input type="text" name="cargaH" id="cargaH" placeholder="Carga Horária">
+                <input type="text" name="cargaH" id="cargaH" placeholder="Carga Horária" required>
             </div>
             <div class="send">
                 <input type="submit" value="Cadastrar Curso">

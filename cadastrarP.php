@@ -31,17 +31,17 @@
         <div class="cadpai">
             <div class="cadT">
                 <label for="NomeP">Nome</label>
-                <input type="text" name="nomeP" placeholder="Nome do Professor" id="nomeP">
+                <input type="text" name="nomeP" placeholder="Nome do Professor" id="nomeP" required>
                 <label for="dataNP">Data de nascimento</label>
-                <input type="date" name="dataNP" id="dataNP" placeholder="Data de Nascimento">
+                <input type="date" name="dataNP" id="dataNP" placeholder="Data de Nascimento" required>
                 <label for="telefoneP">Telefone</label>
-                <input type="text" name="telefoneP" id="telefoneP" placeholder="Nome do Telefone">
+                <input type="text" name="telefoneP" id="telefoneP" placeholder="Nome do Telefone" required>
             </div>
             <div class="cadT2">
                 <label for="cpfP">CPF</label>
-                <input type="text" name="cpfP" id="cpfP" placeholder="CPF">
+                <input type="text" name="cpfP" id="cpfP" placeholder="CPF" required>
                 <label for="salario">Salário</label>
-                <input type="text" name="salario" id="salario" placeholder="Salário">
+                <input type="text" name="salario" id="salario" placeholder="Salário" required>
             </div>
             <div class="send">
                 <input type="submit" value="Cadastrar Professor">

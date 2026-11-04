@@ -31,28 +31,31 @@
         <div class="cadpai">
             <div class="cadT">
                 <label for="turma">Turma</label>
-                <input type="text" name="nomeT" placeholder="Nome da Turma" id="turma">
+                <input type="text" name="nomeT" placeholder="Nome da Turma" id="turma" required>
                 <label for="Ano">Ano/Semestre</label>
-                <input type="text" name="ano" id="Ano" placeholder="Ano/Semestre">
+                <input type="text" name="ano" id="Ano" placeholder="Ano/Semestre" required>
                 <label for="Turno">Selecione o Turno</label>
-                <select name="Turno" id="Turno">
+                <select name="Turno" id="Turno" required>
                     <option>Selecione o Turno</option>
                     <option value="1">Manhã</option>
                     <option value="2">Tarde</option>
                     <option value="3">Noite</option>
                 </select>
-                <label for="curso">Nome do Curso</label>
-                <input type="text" name="curso" id="curso" placeholder="Nome do Curso">
+                <label for="curso">Selecione o Curso</label>
+                <select name="curso" id="curso">
+                    <option value="#">Selecione o Curso</option>
+                    <!-- Repetir o card de opções conforme o cadastro de cursos -->
+                </select>
             </div>
             <div class="cadT2">
                 <label for="dataI">Data de Início</label>
-                <input type="date" name="dataI" id="dataI" value="Data De Início">
+                <input type="date" name="dataI" id="dataI" value="Data De Início" required>
                 <label for="dataT">Data de Término</label>
-                <input type="date" name="dataT" id="dataT" value="Data De Término">
+                <input type="date" name="dataT" id="dataT" value="Data De Término" required>
                 <label for="prof">Professor Responsável</label>
-                <input type="text" name="professor" id="professor" placeholder="Professor Responsável">
+                <input type="text" name="professor" id="professor" placeholder="Professor Responsável" required>
                 <label for="Sala">Sala</label>
-                <input type="number" id="Sala" name="Sala" placeholder="Sala">
+                <input type="number" id="Sala" name="Sala" placeholder="Sala" required>
             </div>
             <div class="send">
                 <input type="submit" value="Cadastrar Turma">

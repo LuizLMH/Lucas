@@ -10,12 +10,7 @@
 
 <body>
 
-<?php
-if(!isset($_POST["nome"])){
-   header("Location: index.php");
-    exit(); 
-}else{
-?>
+
     <div class="pagina2">
         <div class="titulob">
             <h1 id="tb">Sistema</h1>
@@ -94,9 +89,7 @@ if(!isset($_POST["nome"])){
                 </div>
             </div>
         </div>
-        <?php
-}
-        ?>
+
 </body>
 
 </html>

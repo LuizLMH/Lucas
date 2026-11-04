@@ -36,30 +36,30 @@
                 <div class="cadpai">
                     <div class="cadT2">
                         <label for="Nome">Nome completo</label>
-                        <input type="text" name="nome" id="Nome" placeholder="Nome Completo">
+                        <input type="text" name="nome" id="Nome" placeholder="Nome Completo" required>
                         <label for="Nome pai">Nome do pai</label>
-                        <input type="text" name="pai" id="pai" placeholder="Nome do Pai">
+                        <input type="text" name="pai" id="pai" placeholder="Nome do Pai" required>
                         <label for="Nome Mãe">Nome da mãe</label>
-                        <input type="text" name="mae" id="mae" placeholder="Nome da Mãe">
+                        <input type="text" name="mae" id="mae" placeholder="Nome da Mãe" required>
                         <label for="cpf">CPF</label>
-                        <input type="number" name="cpf" id="cpf" placeholder="CPF">
+                        <input type="number" name="cpf" id="cpf" placeholder="CPF" required>
                         <label for="Data">Data de nascimento</label>
                         <input type="date" name="dataN" id="dataN"
-                            placeholder="Data de Nascimento">
+                            placeholder="Data de Nascimento" required>
                     </div>
                     <div class="cadT">
                         <label for="Tefefone">Telefone</label>
-                        <input type="number" name="telefone" id="tefefone" placeholder="Telefone">
+                        <input type="number" name="telefone" id="tefefone" placeholder="Telefone" required>
                         <label for="Bairro">Bairro</label>
-                        <input type="text" name="bairro" id="bairro" placeholder="Bairro">
+                        <input type="text" name="bairro" id="bairro" placeholder="Bairro" required>
                         <label for="Endereço">Endereço</label>
-                        <input type="text" name="endereco" id="endereco" placeholder="Endereço">
+                        <input type="text" name="endereco" id="endereco" placeholder="Endereço" required>
                         <label for="Numero">Número</label>
-                        <input type="number" name="numero" id="numero" placeholder="Número">
+                        <input type="number" name="numero" id="numero" placeholder="Número" required>
                         <label for="Cidade">Cidade</label>
-                        <input type="text" name="cidade" id="cidade" placeholder="Cidade">
+                        <input type="text" name="cidade" id="cidade" placeholder="Cidade" required>
                         <label for="Select">Turma</label>
-                        <select name="select" id="select">
+                        <select name="select" id="select" required>
                             <option>Selecione</option>
                             <option value="1">Informatica Básica</option>
                             <option value="2">Banco de Dados</option>
