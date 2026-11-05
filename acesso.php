@@ -13,8 +13,8 @@
             <div class="Ecentro">
                 <h1>Crie sua conta</h1>
                 <form action="inserirU.php" method="post">
-                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome de usuário">
-                    <input type="text" name="senha" id="senha" placeholder="Crie sua senha">
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome de usuário" required>
+                    <input type="password" name="senha" id="senha" placeholder="Crie sua senha" required>
                     <input type="submit" value="Confirmar">
                     <input type="reset" value="Cancelar">
                 </form>

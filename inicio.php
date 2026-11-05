@@ -34,28 +34,46 @@
         </div>
         <div class="informacoes">
             <div class="info1">
-                <h1>420</h1>
+                <?php
+                include 'conecta.php';
+                $resultado = mysqli_query($conexao, "SELECT * FROM alunos");
+
+                $totalPessoas = mysqli_num_rows($resultado);
+                ?>
+                <h1> <?php echo $totalPessoas; ?> </h1>
                 <p>Alunos Cadastrados</p>
             </div>
             <div class="info1">
-                <h1>386</h1>
+                <h1> <?php echo $totalPessoas; ?> </h1>
                 <p>Alunos Ativos</p>
             </div>
             <div class="info1">
-                <h1>18</h1>
+                <?php $resultado = mysqli_query($conexao, "SELECT * FROM turmas");
+
+                $totalTurmas = mysqli_num_rows($resultado); ?>
+                <h1><?php echo $totalTurmas; ?></h1>
                 <p>Turmas Cadastrados</p>
             </div>
             <div class="info1">
-                <h1>12</h1>
+                <?php $resultado = mysqli_query($conexao, "SELECT * FROM turmas");
+
+                $totalTurmas = mysqli_num_rows($resultado); ?>
+                <h1> <?php echo $totalTurmas; ?> </h1>
                 <p>Aulas da Semana</p>
             </div>
             <div class="info1">
-                <h1>14</h1>
-                <p>Professores Ativos</p>
+                <?php $resultado = mysqli_query($conexao, "SELECT * FROM professores");
+
+                $totalProfessores = mysqli_num_rows($resultado); ?>
+                <h1><?php echo $totalProfessores; ?></h1>
+                <p>Professores Cadastrados</p>
             </div>
             <div class="info1">
-                <h1>38</h1>
-                <p>Matrículas do Mês</p>
+                <?php $resultado = mysqli_query($conexao, "SELECT * FROM cursos");
+
+                $totalCursos = mysqli_num_rows($resultado); ?>
+                <h1><?php echo $totalCursos ?></h1>
+                <p>Cursos Cadastrados</p>
             </div>
         </div>
         <div class="dividir">
