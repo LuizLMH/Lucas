@@ -49,8 +49,8 @@ mysqli_stmt_close($stmt);
                 <p>Usuário Cadastrado</p>
                 <br>
 
-                <a href="acesso.php" class="r1">Cadastrar um novo Usuário</a>
-                <a href="index.php" class="r2">Entrar</a>
+                <a href="acesso.php">Cadastrar um novo Usuário</a>
+                <a href="index.php">Entrar</a>
 
             </div>
         </div>

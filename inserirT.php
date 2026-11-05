@@ -30,8 +30,8 @@
                 <?php
                 echo "<p>Turma Cadastrada!</p> <br>";
                 ?>
-                <a href="cadastrarT.php" class="r1">Cadastrar um novo Curso</a>
-                <a href="visualizarT.php" class="r2">Ver cursos Cadastrados</a>
+                <a href="cadastrarT.php" class="r1">Cadastrar uma nova Turma</a>
+                <a href="visualizarT.php" class="r2">Ver Turmas Cadastradas</a>
                 <a href="index.php" id="sair">Sair</a>
             </div>
         </div>

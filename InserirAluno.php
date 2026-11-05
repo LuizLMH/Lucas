@@ -34,8 +34,8 @@
                 <?php
                 echo "<p>Aluno Cadastrado!</p> <br>";
                 ?>
-                <a href="cadastrarAl.php" class="r1">Cadastrar um novo Curso</a>
-                <a href="visualizarAl.php" class="r2">Ver cursos Cadastrados</a>
+                <a href="cadastrarAl.php" class="r1">Cadastrar um novo Alono</a>
+                <a href="visualizarAl.php" class="r2">Ver Alunos Cadastrados</a>
                 <a href="index.php" id="sair">Sair</a>
             </div>
         </div>

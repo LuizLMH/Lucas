@@ -13,11 +13,11 @@
         <div class="index">
             <div class="boxesquerda">
                 <div class="iniciocentro">
-                    <h1>
+                    <h1 id="cor">
                         Sistema de Gestão Acadêmica
                     </h1>
                     <br>
-                    <p>Gerêncie alunos, turmas, professores e acompanhe as principais informações do sistema de forma
+                    <p id="cor">Gerêncie alunos, turmas, professores e acompanhe as principais informações do sistema de forma
                         prática,
                         organizada e moderna.</p>
                 </div>
