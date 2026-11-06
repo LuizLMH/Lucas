@@ -24,20 +24,24 @@
             </div>
             <div class="direita">
                 <div class="formulariodireita">
-                    <div class="texto">
-                        <h1>Acessar Sistema</h1>
-                        <p>Informe seus dados para acessar o sistema</p>
+                    <div class="textoIndex">
+                        <h2 class="textoi">Acessar Sistema</h2>
+                        <h4 class="textoi2">Informe seus dados para acessar o sistema</h4>
                     </div>
-                    <form action="validarU.php" method="post">
-                        <input type="text" name="nome" id="nome" placeholder="Digite seu usuário" required>
-                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
-                        <div class="lembraracesso">
-                            <input type="checkbox" name="lembrar" id="lembrar" value="Lembrar Acesso">
-                            <label for="lembrar"></label>
-                            <a href="acesso.php">Criar Conta</a>
-                        </div>
-                        <input id="entrar" type="submit" value="Entrar">
-                    </form>
+                    <div class="formIndex">
+                        <form action="validarU.php" method="post">
+                            <label for="nome">Nome de Usuário</label>
+                            <input type="text" name="nome" id="nomeIndex" placeholder="Digite seu usuário" required>
+                            <label for="senha">Senha</label>
+                            <input type="password" name="senha" id="senhaIndex" placeholder="Digite sua senha" required>
+                            <!-- <div class="lembraracesso">
+                                <input type="checkbox" name="lembrar" id="lembrar" value="Lembrar Acesso">
+                                <label for="lembrar"></label>
+                                <a href="acesso.php">Criar Conta</a>
+                            </div> -->
+                            <input id="entrar" type="submit" value="Entrar">
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
