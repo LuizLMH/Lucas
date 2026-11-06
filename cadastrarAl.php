@@ -46,6 +46,24 @@
                         <label for="Data">Data de nascimento</label>
                         <input type="date" name="dataN" id="dataN"
                             placeholder="Data de Nascimento" required>
+                        <label for="turma">Turma</label>
+                        <select name="turma" id="turma">
+                            <option value="#">Selecione a Turma</option>
+                            <?php
+                            include 'conecta.php';
+                            $sql = "SELECT nomeTurma FROM turmas";
+                            // $nomeC=$_POST["nomeC"]
+                            $resultado = mysqli_query($conexao, $sql);
+                            if (mysqli_num_rows($resultado) > 0) {
+                                while ($linha = mysqli_fetch_array($resultado)) {
+                            ?>
+                                    <option value="Nome"> <?php echo $linha['nomeTurma']; ?>
+                                    </option>
+                            <?php
+                                }
+                            }
+                            ?>
+                        </select>
                     </div>
                     <div class="cadT">
                         <label for="Tefefone">Telefone</label>
@@ -58,13 +76,22 @@
                         <input type="number" name="numero" id="numero" placeholder="Número" required>
                         <label for="Cidade">Cidade</label>
                         <input type="text" name="cidade" id="cidade" placeholder="Cidade" required>
-                        <label for="Select">Turma</label>
-                        <select name="select" id="select" required>
-                            <option>Selecione</option>
-                            <option value="1">Informatica Básica</option>
-                            <option value="2">Banco de Dados</option>
-                            <option value="3">Lógica de Programação</option>
-                            <option value="4">Desenvolvimento Web</option>
+                        <label for="curso">Selecione o Curso</label>
+                        <select name="curso" id="curso">
+                            <option value="#">Selecione o Curso</option>
+                            <?php
+                            include 'conecta.php';
+                            $sql = "SELECT nomeC FROM cursos";
+                            // $nomeC=$_POST["nomeC"]
+                            $resultado = mysqli_query($conexao, $sql);
+                            if (mysqli_num_rows($resultado) > 0) {
+                                while ($linha = mysqli_fetch_array($resultado)) {
+                            ?>
+                                    <option value="Nome"> <?php echo $linha['nomeC']; ?> </option>
+                            <?php
+                                }
+                            }
+                            ?>
                         </select>
                     </div>
                 </div>

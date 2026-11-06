@@ -31,20 +31,33 @@
         <div class="cadpai">
             <div class="cadT">
                 <label for="turma">Turma</label>
-                <input type="text" name="nomeT" placeholder="Nome da Turma" id="turma" required>
+                <input type="text" name="nomeT" placeholder="Nome da Turma" id="turmas" required>
                 <label for="Ano">Ano/Semestre</label>
                 <input type="text" name="ano" id="Ano" placeholder="Ano/Semestre" required>
                 <label for="Turno">Selecione o Turno</label>
                 <select name="Turno" id="Turno" required>
                     <option>Selecione o Turno</option>
-                    <option value="1">Manhã</option>
-                    <option value="2">Tarde</option>
-                    <option value="3">Noite</option>
+                    <option value="Manhã">Manhã</option>
+                    <option value="Tarde">Tarde</option>
+                    <option value="Noite">Noite</option>
+                    <option value="Integral">Integral</option>
                 </select>
                 <label for="curso">Selecione o Curso</label>
                 <select name="curso" id="curso">
                     <option value="#">Selecione o Curso</option>
-                    <!-- Repetir o card de opções conforme o cadastro de cursos -->
+                    <?php
+                    include 'conecta.php';
+                    $sql = "SELECT nomeC FROM cursos";
+                    // $nomeC=$_POST["nomeC"]
+                    $resultado = mysqli_query($conexao, $sql);
+                    if (mysqli_num_rows($resultado) > 0) {
+                        while ($linha = mysqli_fetch_array($resultado)) {
+                    ?>
+                            <option value="Nome"> <?php echo $linha['nomeC']; ?> </option>
+                    <?php
+                        }
+                    }
+                    ?>
                 </select>
             </div>
             <div class="cadT2">
@@ -52,8 +65,23 @@
                 <input type="date" name="dataI" id="dataI" value="Data De Início" required>
                 <label for="dataT">Data de Término</label>
                 <input type="date" name="dataT" id="dataT" value="Data De Término" required>
-                <label for="prof">Professor Responsável</label>
-                <input type="text" name="professor" id="professor" placeholder="Professor Responsável" required>
+                <label for="professor">Professor Responsável</label>
+                <select name="professor" id="professor">
+                    <option value="#">Selecione o professor</option>
+                    <?php
+                    include 'conecta.php';
+                    $sql = "SELECT nomeP FROM professores";
+                    // $nomeC=$_POST["nomeC"]
+                    $resultado = mysqli_query($conexao, $sql);
+                    if (mysqli_num_rows($resultado) > 0) {
+                        while ($linha = mysqli_fetch_array($resultado)) {
+                    ?>
+                            <option value="Nome"> <?php echo $linha['nomeP']; ?> </option>
+                    <?php
+                        }
+                    }
+                    ?>
+                </select>
                 <label for="Sala">Sala</label>
                 <input type="number" id="Sala" name="Sala" placeholder="Sala" required>
             </div>

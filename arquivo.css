@@ -847,6 +847,16 @@ a {
     display: flex;
 }
 
+#turma {
+    display: flex;
+    flex-direction: column;
+    width: 99%;
+    height: 100px;
+    margin-bottom: 10px;
+    display: flex;
+    transition: all 1.3s ease;
+}
+
 .cadT {
     flex-direction: column;
     width: 45%;
@@ -862,11 +872,19 @@ a {
 .cadT2 input:hover {
     box-shadow: 0 0 15px gray;
 }
-
+.cadT select{
+    transition: all .3s ease;
+}
 .cadT select:hover {
     box-shadow: 0 0 15px gray;
 }
-
+.cadT2 select{
+    border: 2px solid orange;
+    transition: all .3s ease;
+}
+.cadT2 select:hover{
+    box-shadow: 0 0 15px gray;
+}
 .cadT2 {
     width: 45%;
     display: flex;
@@ -895,7 +913,8 @@ a {
     outline: none;
 }
 
-.cadT2 input {
+.cadT2 input,
+select {
     outline: none;
     border-radius: 20px;
     flex-direction: column;
