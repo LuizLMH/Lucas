@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: beige;
+    background-color: rgb(212, 211, 211);
 }
 
 .pages,
@@ -74,10 +74,10 @@ th {
     height: 100%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    background: linear-gradient(100deg, rgb(247, 235, 70), rgb(252, 165, 3), rgb(247, 235, 70), rgb(252, 165, 3), rgb(247, 235, 70));
+    background: linear-gradient(100deg, rgb(77, 224, 243), rgb(1, 150, 170), rgb(34, 225, 250), rgb(1, 150, 170), rgb(77, 224, 243));
     background-size: 300% 300%;
-    animation: gradient 3s linear infinite reverse, entrada2 2s forwards;
-    box-shadow: 5px 0 20px orange;
+    animation: gradient 3s linear infinite, entrada2 2s;
+    box-shadow: 5px 0 20px rgb(77, 224, 243);
 }
 
 @keyframes entrada2 {
@@ -140,7 +140,7 @@ p {
 .formulariodireita {
     background-color: transparent;
     width: 140%;
-    border: 10px double orange;
+    border: 10px double rgb(77, 224, 243);
     border-radius: 20px;
     align-items: center;
     justify-content: center;
@@ -226,13 +226,13 @@ input:not(:placeholder-shown) {
     text-align: center;
     font-size: 20px;
     margin-left: 40%;
-    background-color: rgb(250, 183, 59);
+    background-color: rgb(90, 225, 243);
     border-radius: 8px;
     cursor: pointer;
 }
 
 .formulariodireita input[type="submit"]:hover {
-    background-color: orange;
+    background-color: rgb(1, 150, 170);
     box-shadow: 0 0 20px gray;
 }
 
@@ -261,7 +261,7 @@ input:not(:placeholder-shown) {
 }
 
 .lembraracesso label[for="lembrar"]:hover {
-    text-shadow: 0 0 15px orange;
+    text-shadow: 0 0 15px rgb(1, 150, 170);
 }
 
 #lembrar+label::after {
@@ -274,7 +274,7 @@ input:not(:placeholder-shown) {
 
 @keyframes botaooff {
     0% {
-        background-color: orange;
+        background-color: rgb(1, 150, 170);
         border-radius: 25px;
         padding-left: 14%;
         padding-right: 14%;
@@ -282,7 +282,7 @@ input:not(:placeholder-shown) {
 
     50% {
         background-color: transparent;
-        background-color: rgba(221, 165, 61, 0.616);
+        background-color: rgb(127, 224, 236);
         border-radius: 20px;
         padding-left: 9%;
         padding-right: 9%;
@@ -320,14 +320,14 @@ input:not(:placeholder-shown) {
 
     50% {
         background-color: transparent;
-        background-color: rgba(221, 165, 61, 0.616);
+        background-color: rgb(138, 222, 233);
         border-radius: 20px;
         padding-left: 9%;
         padding-right: 9%;
     }
 
     100% {
-        background-color: orange;
+        background-color: rgb(173, 244, 253);
         border-radius: 25px;
         padding-left: 14%;
         padding-right: 14%;
@@ -343,7 +343,7 @@ input:not(:placeholder-shown) {
     display: flex;
     text-align: left;
     text-decoration: none;
-    color: orange;
+    color: rgb(1, 150, 170);
     cursor: pointer;
     margin-left: 75%;
     margin-top: -3%;
@@ -360,7 +360,7 @@ p {
     position: relative;
     text-align: center;
     font-size: 45px;
-    text-decoration-color: orange;
+    text-decoration-color: rgb(1, 150, 170);
     /* color: black; */
     margin-bottom: 60px;
 }
@@ -389,14 +389,14 @@ p {
 }
 
 .pages a:hover {
-    color: orange;
+    color: rgb(126, 234, 248);
     text-decoration: underline;
 }
 
 .pages .p2 {
     scale: 1.04;
     text-decoration: underline;
-    color: orange;
+    color: rgb(1, 150, 170);
 }
 
 .pages .p2:hover {
@@ -405,7 +405,7 @@ p {
 }
 
 #to {
-    color: orange;
+    color: rgb(1, 150, 170);
 }
 
 #tb {
@@ -436,14 +436,15 @@ a {
 }
 
 .pages6 a:hover {
-    color: orange;
+    color: rgb(97, 225, 241);
+    color: ;
     text-decoration: underline;
 }
 
 .pages6 .p6 {
     scale: 1.04;
     text-decoration: underline;
-    color: orange;
+    color: rgb(73, 223, 243);
 }
 
 .pages6 .p6:hover {
@@ -453,7 +454,8 @@ a {
 
 .subtitle {
     padding: 2px;
-    background-color: orange;
+    background-color: rgb(32, 52, 236);
+
     border-radius: 20px;
     margin-bottom: 80px;
 }
@@ -491,15 +493,14 @@ a {
     min-height: 200px;
     border: 3px solid transparent;
     transition: all 0.5s ease;
-    background-color: rgb(250, 206, 123);
+    background-color: rgb(80, 218, 236);
 }
 
 .info1:hover {
-    background-color: orange;
+    background-color: rgb(1, 150, 170);
     margin-bottom: -10px;
     margin-top: -10px;
     color: black;
-    border: 3px dashed orange;
 }
 
 /* .pagina2 {
@@ -537,7 +538,7 @@ a {
     width: 90px;
     margin-left: 85%;
     border-radius: 50px;
-    background-color: orange;
+    background-color: rgb(80, 218, 236);
     font-size: 30px;
     text-align: center;
 }
@@ -872,19 +873,24 @@ a {
 .cadT2 input:hover {
     box-shadow: 0 0 15px gray;
 }
-.cadT select{
+
+.cadT select {
     transition: all .3s ease;
 }
+
 .cadT select:hover {
     box-shadow: 0 0 15px gray;
 }
-.cadT2 select{
+
+.cadT2 select {
     border: 2px solid orange;
     transition: all .3s ease;
 }
-.cadT2 select:hover{
+
+.cadT2 select:hover {
     box-shadow: 0 0 15px gray;
 }
+
 .cadT2 {
     width: 45%;
     display: flex;
