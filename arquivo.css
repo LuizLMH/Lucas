@@ -210,7 +210,7 @@ input {
 }
 
 input:not(:placeholder-shown) {
-    background-color: rgba(250, 164, 4, 0.342);
+    background-color: white;
 }
 
 ::placeholder {
@@ -218,11 +218,11 @@ input:not(:placeholder-shown) {
 }
 
 .formulariodireita input[type="submit"] {
-    width: 15%;
-    height: 15%;
+    width: 25%;
+    height: 25%;
     display: flex;
     flex-direction: column;
-    margin-top: -50px;
+    margin-top: -30%;
     text-align: center;
     font-size: 20px;
     margin-left: 40%;
@@ -389,7 +389,7 @@ p {
 }
 
 .pages a:hover {
-    color: rgb(126, 234, 248);
+    color: rgb(1, 150, 170);
     text-decoration: underline;
 }
 
@@ -436,15 +436,14 @@ a {
 }
 
 .pages6 a:hover {
-    color: rgb(97, 225, 241);
-    color: ;
+    color: rgb(1, 150, 170);
     text-decoration: underline;
 }
 
 .pages6 .p6 {
     scale: 1.04;
     text-decoration: underline;
-    color: rgb(73, 223, 243);
+    color: rgb(1, 150, 170);
 }
 
 .pages6 .p6:hover {
@@ -455,7 +454,6 @@ a {
 .subtitle {
     padding: 2px;
     background-color: rgb(32, 52, 236);
-
     border-radius: 20px;
     margin-bottom: 80px;
 }
@@ -597,14 +595,14 @@ a {
 }
 
 .pages7 a:hover {
-    color: orange;
+    color: rgb(1, 150, 170);
     text-decoration: underline;
 }
 
 .pages7 .p7 {
     scale: 1.04;
     text-decoration: underline;
-    color: orange;
+    color: rgb(1, 150, 170);
 }
 
 .pages7 .p7:hover {
@@ -629,14 +627,14 @@ a {
 }
 
 .pages8 a:hover {
-    color: orange;
+    color: rgb(1, 150, 170);
     text-decoration: underline;
 }
 
 .pages8 .p8 {
     scale: 1.04;
     text-decoration: underline;
-    color: orange;
+    color: rgb(1, 150, 170);
 }
 
 .pages8 .p8:hover {
@@ -655,14 +653,14 @@ a {
 }
 
 .pages9 a:hover {
-    color: orange;
+    color: rgb(1, 150, 170);
     text-decoration: underline;
 }
 
 .pages9 .p9 {
     scale: 1.04;
     text-decoration: underline;
-    color: orange;
+    color: rgb(1, 150, 170);
 }
 
 .pages9 .p9:hover {
@@ -681,14 +679,14 @@ a {
 }
 
 .pages10 a:hover {
-    color: orange;
+    color: rgb(1, 150, 170);
     text-decoration: underline;
 }
 
 .pages10 .p10 {
     scale: 1.04;
     text-decoration: underline;
-    color: orange;
+    color: rgb(1, 150, 170);
 }
 
 .pages10 .p10:hover {
@@ -719,14 +717,14 @@ a {
 }
 
 .pages11 a:hover {
-    color: orange;
+    color: rgb(1, 150, 170);
     text-decoration: underline;
 }
 
 .pages11 .p11 {
     scale: 1.04;
     text-decoration: underline;
-    color: orange;
+    color: rgb(1, 150, 170);
 }
 
 .pages11 .p11:hover {
@@ -751,14 +749,14 @@ a {
 }
 
 .pages3 a:hover {
-    color: orange;
+    color: rgb(1, 150, 170);
     text-decoration: underline;
 }
 
 .pages3 .p3 {
     scale: 1.04;
     text-decoration: underline;
-    color: orange;
+    color: rgb(1, 150, 170);
 }
 
 .pages3 .p3:hover {
@@ -783,14 +781,14 @@ a {
 }
 
 .pages4 a:hover {
-    color: orange;
+    color: rgb(1, 150, 170);
     text-decoration: underline;
 }
 
 .pages4 .p4 {
     scale: 1.04;
     text-decoration: underline;
-    color: orange;
+    color: rgb(1, 150, 170);
 }
 
 .pages4 .p4:hover {
@@ -815,14 +813,14 @@ a {
 }
 
 .pages12 a:hover {
-    color: orange;
+    color: rgb(1, 150, 170);
     text-decoration: underline;
 }
 
 .pages12 .p12 {
     scale: 1.04;
     text-decoration: underline;
-    color: orange;
+    color: rgb(1, 150, 170);
 }
 
 .pages12 .p12:hover {
@@ -875,6 +873,7 @@ a {
 }
 
 .cadT select {
+    border: 2px solid rgb(1, 150, 170);
     transition: all .3s ease;
 }
 
@@ -883,7 +882,7 @@ a {
 }
 
 .cadT2 select {
-    border: 2px solid orange;
+    border: 2px solid rgb(1, 150, 170);
     transition: all .3s ease;
 }
 
@@ -898,11 +897,11 @@ a {
 }
 
 .cadT2 input {
-    border: solid 2px orange;
+    border: solid 2px rgb(1, 150, 170);
 }
 
 .cadT input {
-    border: solid 2px orange;
+    border: solid 2px rgb(1, 150, 170);
     outline: none;
     border-radius: 20px;
     flex-direction: column;
@@ -911,7 +910,7 @@ a {
 }
 
 .cadT select {
-    border: solid 2px orange;
+    border: solid 2px rgb(1, 150, 170)e;
     padding: 15px;
     border-radius: 20px;
     width: 100%;
@@ -937,9 +936,10 @@ select {
 }
 
 .send input {
+    background-color: rgb(7, 130, 146);
     padding: 15px;
     margin-bottom: 10px;
-    border: 2px solid orange;
+    border: 2px solid rgb(1, 150, 170);
     border-radius: 10px;
     transition: all 0.3s ease;
 }
@@ -959,18 +959,28 @@ select {
 /*A partir daqui é da página 7*/
 .verturmas input[type="search"] {
     margin-bottom: 30px;
-    border: 2px solid orange;
+    border: 2px solid rgb(1, 150, 170);
     padding: 10px;
     border-radius: 20px;
+}
+
+.verturmas input[type="search"]:hover {
+    box-shadow: 0 0 10px rgb(9, 189, 212);
 }
 
 .verturmas input[type="submit"] {
     margin-bottom: 30px;
     cursor: pointer;
     border: 2px solid transparent;
-    background-color: orange;
+    background-color: rgb(27, 224, 250);
     padding: 10px;
     border-radius: 20px;
+}
+
+.verturmas input[type="submit"]:hover {
+    background-color: rgb(9, 189, 212);
+    color: white;
+    box-shadow: 0 0 10px rgb(9, 189, 212);
 }
 
 #mais {
@@ -1009,7 +1019,7 @@ select {
     cursor: pointer;
 }
 
-#atual {
+/* #atual {
     background-color: orange;
     border-radius: 50px;
 }
@@ -1031,7 +1041,7 @@ select {
 #depois:hover {
     cursor: pointer;
     background-color: orange;
-}
+} */
 
 /*A partir daqui é a página 8*/
 
@@ -1040,7 +1050,7 @@ select {
     width: 100%;
     height: 250px;
     margin-top: 50px;
-    background-color: orange;
+    background-color: rgb(9, 189, 212);
     border-radius: 30px;
     flex-direction: column;
     transition: all 1s ease;
@@ -1048,8 +1058,7 @@ select {
 }
 
 .cabecalho {
-    background: linear-gradient(100deg, orange, rgb(247, 235, 70), rgb(252, 165, 3), orange);
-    background-size: 300% 300%;
+    background-color: rgb(1, 150, 170);
     animation: gradient 3s linear infinite alternate-reverse;
 }
 
@@ -1060,7 +1069,7 @@ select {
     color: black;
     margin-bottom: 0%;
     display: inline;
-    text-shadow: 0 0 10px rgb(250, 213, 5);
+    text-shadow: 0 0 10px rgb(1, 150, 170);
 }
 
 #pag82 {
@@ -1100,14 +1109,14 @@ select {
 #l1 {
     text-align: center;
     border-radius: 20px;
-    border-top: double 3px orange;
-    border-bottom: double 3px orange;
+    border-top: double 3px rgb(1, 150, 170);
+    border-bottom: double 3px rgb(1, 150, 170);
 }
 
 #l2 {
     text-align: center;
     text-decoration: underline;
-    text-decoration-color: orange;
+    text-decoration-color: rgb(1, 150, 170);
     text-decoration-style: solid;
     background-color: #ddd;
     border-radius: 20px;
@@ -1118,7 +1127,7 @@ select {
 .topo {
     padding: -2px;
     margin-bottom: 15px;
-    background-color: orange;
+    background-color: rgb(1, 150, 170);
     border-radius: 30px;
 }
 
@@ -1143,7 +1152,7 @@ label {
     outline: none;
     margin-left: 10px;
     border-radius: 20px;
-    border: 2px solid orange;
+    border: 2px solid rgb(1, 150, 170);
     margin-bottom: 25px;
     margin-top: 10px;
 }
@@ -1164,7 +1173,7 @@ label {
     width: 98.5%;
     height: 20%;
     border-radius: 20px;
-    border: 2px solid orange;
+    border: 2px solid rgb(1, 150, 170);
     margin-bottom: 10px;
     transition: all 0.3s ease;
 }
@@ -1197,7 +1206,7 @@ label {
 
 /*A partir daqui é da página 4*/
 #t {
-    background-color: orange;
+    background-color: rgb(1, 150, 170);
     border-radius: 25px;
     text-align: center;
     padding: 20px;
@@ -1206,7 +1215,7 @@ label {
 }
 
 .pesquisa2 input[type="search"] {
-    border: 2px solid orange;
+    border: 2px solid rgb(1, 150, 170);
     outline: none;
     padding: 10px;
     border-radius: 20px;
@@ -1215,16 +1224,15 @@ label {
 
 .pesquisa2 input[type="button"] {
     border-radius: 20px;
-    background-color: rgb(238, 172, 48);
+    background-color: rgb(1, 150, 170);
     outline: none;
     transition: all 0.3s ease;
-    border: 2px solid rgb(233, 176, 70);
-    padding: 10px;
+    border: 2px solid rgb(1, 150, 170) padding: 10px;
 }
 
 .pesquisa2 input[type="button"]:hover {
-    border: 2px solid orange;
-    background-color: orange;
+    border: 2px solid rgb(1, 150, 170);
+    background-color: rgb(1, 150, 170);
 }
 
 /*Aqui são os status dos alunos que eu esqueci de por lá em cima*/
@@ -1241,16 +1249,15 @@ label {
 }
 
 #tabelaAA {
-    background: linear-gradient(250deg, orange, rgba(255, 166, 0, 0.466), orange, rgba(255, 166, 0, 0.466));
-    background-size: 300% 300%;
+    background-color: rgb(1, 150, 170);
     animation: alunos 2s linear infinite reverse;
 }
 
 .aluno {
     border-radius: 15px;
-    border-top: 5px double orange;
-    border-bottom: 5px double orange;
-    background: linear-gradient(250deg, orange, white, rgba(255, 166, 0, 0.466), white, rgba(255, 166, 0, 0.466));
+    border-top: 5px double rgb(1, 150, 170);
+    border-bottom: 5px double rgb(1, 150, 170);
+    background-color: rgb(1, 150, 170);
 }
 
 @keyframes alunos {
@@ -1300,7 +1307,7 @@ label {
 }
 
 .Ecentro input[type="password"]:hover {
-    box-shadow: 0 0 15px orange;
+    box-shadow: 0 0 15px rgb(1, 150, 170);
     transition: all 1s ease;
 }
 
@@ -1331,14 +1338,14 @@ label {
 .Ecentro h1 {
     text-align: center;
     color: #000;
-    border-top: 2px solid orange;
-    border-bottom: 2px solid orange;
+    border-top: 2px solid rgb(1, 150, 170);
+    border-bottom: 2px solid rgb(1, 150, 170);
     border-radius: 50px;
 }
 
 .Ecentro input[type="password"]:not(:placeholder-shown) {
-    border-color: orange;
-    background: linear-gradient(45deg, orange, white, orange);
+    border-color: rgb(1, 150, 170);
+    background: linear-gradient(45deg, rgb(34, 210, 233), white, rgb(34, 210, 233));
     background-size: 300% 300%;
     animation: gradient 3.4s linear infinite alternate;
     transition: all 1s ease;
@@ -1346,7 +1353,7 @@ label {
 
 .Ecentro input[type="password"]:focus {
     border-color: gray;
-    box-shadow: 0 0 20px rgba(252, 173, 54, 0.938);
+    box-shadow: 0 0 20px rgb(1, 150, 170);
 }
 
 .Ecentro input[type="password"]::placeholder {
@@ -1355,7 +1362,7 @@ label {
 }
 
 .Ecentro input[type="password"]:focus::placeholder {
-    color: orange;
+    color: rgb(1, 150, 170);
 }
 
 
