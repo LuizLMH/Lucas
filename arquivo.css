@@ -509,7 +509,6 @@ a {
 
 .pages6 a:hover {
     color: rgb(97, 225, 241);
-    color: ;
     text-decoration: underline;
 }
 
@@ -520,7 +519,7 @@ a {
 }
 
 .pages6 .p6:hover {
-    scale: 1;
+    scale: 1.0;
     color: black;
 }
 
@@ -1300,7 +1299,8 @@ label {
     background-color: rgb(1, 150, 170);
     outline: none;
     transition: all 0.3s ease;
-    border: 2px solid rgb(1, 150, 170) padding: 10px;
+    border: 2px solid rgb(1, 150, 170);
+    padding: 10px;
 }
 
 .pesquisa2 input[type="button"]:hover {
@@ -1455,7 +1455,7 @@ label {
     width: 35%;
     height: 5%;
     border-radius: 20px;
-    box-shadow: 0 0 10px orange;
+    box-shadow: 0 0 10px rgb(1, 150, 170);
 }
 
 .inserirF a {
@@ -1476,7 +1476,7 @@ label {
 
 .inserirF p {
     font-size: 25px;
-    color: orange;
+    color: rgb(1, 150, 170);
     margin: 0;
     padding: 0;
 }
