@@ -13,7 +13,7 @@
         <h1 id="tb">Sistema</h1>
         <h1 id="to">Acadêmico</h1>
     </div>
-    <div class="pages8">
+    <div class="pages9">
         <a href="inicio.php" class="p2">Dashboard</a>
         <a href="cadastrarAl.php" class="p3">Cadastrar Alunos</a>
         <a href="visualizarAl.php" class="p4">Visualizar Alunos</a>
