@@ -18,7 +18,10 @@ body {
 .pages10,
 .pages11,
 .pages12 {
+    display: grid;
+    place-items: end;
     margin-top: 2%;
+    grid-template-columns: repeat(10, 1fr)
 }
 
 #sair {
@@ -29,12 +32,12 @@ body {
     height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url(site.png);
-    background-size: 100%;
+    background-image: url(images.jpg);
+    background-size: 70%;
     width: 100%;
     border-radius: 20px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right;
 }
 
 
@@ -80,7 +83,7 @@ th {
     box-shadow: 5px 0 20px rgb(77, 224, 243);
 }
 
-@keyframes entrada2 {
+/* @keyframes entrada2 {
     from {
         transform: translateX(100%);
         opacity: .10;
@@ -92,7 +95,7 @@ th {
         opacity: 1;
         scale: 1;
     }
-}
+} */
 
 @keyframes gradient {
     from {
@@ -230,19 +233,19 @@ p {
 
 .direita {
     animation-name: entrada;
-    animation-duration: 3s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
 @keyframes entrada {
     from {
-        transform: translateX(100%);
+        /* transform: translateX(100%); */
         scale: .95;
         opacity: .20;
     }
 
     to {
-        transform: translateX(0);
+        /* transform: translateX(0); */
         scale: 1;
         opacity: 1;
     }
