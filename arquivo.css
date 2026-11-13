@@ -1032,26 +1032,26 @@ select {
     cursor: pointer;
 }
 
-#edit {
+.edit {
     border: none;
     border-radius: 20px;
     background-color: rgb(9, 120, 194);
     color: white;
 }
 
-#edit:hover {
+.edit:hover {
     background-color: blue;
     cursor: pointer;
 }
 
-#zero {
+.zero {
     border: none;
     border-radius: 20px;
     background-color: rgb(231, 104, 104);
     color: white;
 }
 
-#zero:hover {
+.zero:hover {
     background-color: red;
     cursor: pointer;
 }

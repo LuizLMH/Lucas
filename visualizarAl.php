@@ -76,8 +76,13 @@
                         <button onclick="window.location.href='detalhes.php'" id="mais">
                             Ver mais
                         </button>
-                        <button type="button" id="edit">Editar</button>
-                        <button type="button" id="zero">Excluir</button>
+                    <td><a class="edit" href=" alterarAl.php?id=<?php echo $linha['idAlunos']; ?>">Alterar</a></td>
+                    <td>
+                        <a class="zero"
+                            href="excluirAl.php?id=<?php echo $linha['idAlunos']; ?>" onclick="return confirm('Tem certeza que deseja excluir este aluno?');">
+                            Excluir
+                        </a>
+                    </td>
                     </td>
                 </tr>
         <?php
@@ -86,5 +91,6 @@
         ?>
     </table>
 </body>
+<!-- id edit e id zero -->
 
 </html>
