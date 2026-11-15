@@ -36,11 +36,13 @@
     <table>
         <tr>
             <th>Nome </th>
-            <th>CPF</th>
-            <th>Data nasc.</th>
+            <th>CPF </th>
+            <th>Data nasc. </th>
             <th>Turma </th>
             <th>Status </th>
-            <th>Ações </th>
+            <th>Ver Mais </th>
+            <th>Alterar </th>
+            <th>Excluir </th>
         </tr>
         <?php
         include 'conecta.php';
@@ -76,10 +78,12 @@
                         <button onclick="window.location.href='detalhes.php'" id="mais">
                             Ver mais
                         </button>
-                    <td><a class="edit" href=" alterarAl.php?id=<?php echo $linha['idAlunos']; ?>">Alterar</a></td>
+                    <td>
+                        <a class="edit" href=" alterarAl.php?id=<?php echo $linha['idAlunos']; ?>">Alterar</a>
+                    </td>
                     <td>
                         <a class="zero"
-                            href="excluirAl.php?id=<?php echo $linha['idAlunos']; ?>" onclick="return confirm('Tem certeza que deseja excluir este aluno?');">
+                            href="excluirAl.php?idAlunos=<?php echo $linha['idAlunos']; ?>" onclick="return confirm('Tem certeza que deseja excluir este aluno?');">
                             Excluir
                         </a>
                     </td>

@@ -18,10 +18,12 @@ body {
 .pages10,
 .pages11,
 .pages12 {
-    display: grid;
-    place-items: end;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 5px;
     margin-top: 2%;
-    grid-template-columns: repeat(10, 1fr)
 }
 
 #sair {
@@ -613,12 +615,6 @@ a {
 
 .ani2:hover {
     box-shadow: 0 0 20px rgb(50, 128, 192);
-}
-
-.pages7 {
-    display: flex;
-    justify-content: right;
-    gap: 5px;
 }
 
 .pages7 a {

@@ -36,13 +36,15 @@
     <div class="tabela">
         <table>
             <tr>
-                <th>Nome do Professor</th>
-                <th>Data de Nascimento</th>
-                <th>Telefone</th>
-                <th>CPF</th>
-                <th>Salário</th>
-                <th>Status</th>
-                <th>Ações</th>
+                <th>Nome do Professor </th>
+                <th>Data de Nascimento </th>
+                <th>Telefone </th>
+                <th>CPF </th>
+                <th>Salário </th>
+                <th>Status </th>
+                <th>Ver Mais </th>
+                <th>Editar </th>
+                <th>Excluir </th>
             </tr>
             <?php
             include 'conecta.php';
@@ -60,8 +62,15 @@
                         <td id="ativo">Ativa</td>
                         <td>
                             <button type="button" id="mais">Ver Mais</button>
-                            <button type="button" id="edit">Editar</button>
-                            <button type="button" id="zero">Excluir</button>
+                        </td>
+                        <td>
+                            <a class="edit" href=" alterarP.php?id=<?php echo $linha['idProfessores']; ?>">Alterar</a>
+                        </td>
+                        <td>
+                            <a class="zero"
+                                href="excluirP.php?idProfessores=<?php echo $linha['idProfessores']; ?>" onclick="return confirm('Tem certeza que deseja excluir este aluno?');">
+                                Excluir
+                            </a>
                         </td>
                     </tr>
             <?php

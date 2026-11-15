@@ -42,7 +42,9 @@
                 <th>Data de Término</th>
                 <th>Professor</th>
                 <th>Status</th>
-                <th>Ações</th>
+                <th>Ver Mais </th>
+                <th>Editar </th>
+                <th>Excluir </th>
             </tr>
             <?php
             include 'conecta.php';
@@ -60,8 +62,15 @@
                         <td id="ativo">Ativa</td>
                         <td>
                             <button type="button" id="mais">Ver Mais</button>
-                            <button type="button" id="edit">Editar</button>
-                            <button type="button" id="zero">Excluir</button>
+                        </td>
+                        <td>
+                            <a class="edit" href=" alterarT.php?id=<?php echo $linha['idTurmas']; ?>">Alterar</a>
+                        </td>
+                        <td>
+                            <a class="zero"
+                                href="excluirT.php?idTurmas=<?php echo $linha['idTurmas']; ?>" onclick="return confirm('Tem certeza que deseja excluir este aluno?');">
+                                Excluir
+                            </a>
                         </td>
                     </tr>
             <?php
