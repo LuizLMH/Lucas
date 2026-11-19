@@ -34,12 +34,8 @@
                             <input type="text" name="nome" id="nomeIndex" placeholder="Digite seu usuário" required>
                             <label for="senha">Senha</label>
                             <input type="password" name="senha" id="senhaIndex" placeholder="Digite sua senha" required>
-                            <!-- <div class="lembraracesso">
-                                <input type="checkbox" name="lembrar" id="lembrar" value="Lembrar Acesso">
-                                <label for="lembrar"></label>
-                                <a href="acesso.php">Criar Conta</a>
-                            </div> -->
                             <input id="entrar" type="submit" value="Entrar">
+                            <a href="inicio.php">Início</a>
                         </form>
                     </div>
                 </div>
