@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="arquivo.css">
+</head>
+
+<body>
+
+
+    <div class="pagina2">
+        <div class="titulob">
+            <h1 id="tb">Sistema</h1>
+            <h1 id="to">Acadêmico</h1>
+        </div>
+        <div class="pages">
+            <a href="sair.php" id="sair">sair</a>
+        </div>
+        <div class="subtitle">
+            <h1>Bem-vindo ao Sistema acadêmico</h1>
+            <p>Gerêncie alunos, turmas, professores e acompanhe os principais indicadores da instituição</p>
+        </div>
+        <div class="informacoes">
+            <div class="info1">
+                <?php
+                include 'conecta.php';
+                $resultado = mysqli_query($conexao, "SELECT * FROM alunos");
+
+                $totalPessoas = mysqli_num_rows($resultado);
+                ?>
+                <h1> <?php echo $totalPessoas; ?> </h1>
+                <p>Alunos Cadastrados</p>
+            </div>
+            <div class="info1">
+                <h1> <?php echo $totalPessoas; ?> </h1>
+                <p>Alunos Ativos</p>
+            </div>
+            <div class="info1">
+                <?php $resultado = mysqli_query($conexao, "SELECT * FROM turmas");
+
+                $totalTurmas = mysqli_num_rows($resultado); ?>
+                <h1><?php echo $totalTurmas; ?></h1>
+                <p>Turmas Cadastrados</p>
+            </div>
+            <div class="info1">
+                <?php $resultado = mysqli_query($conexao, "SELECT * FROM turmas");
+
+                $totalTurmas = mysqli_num_rows($resultado); ?>
+                <h1> <?php echo $totalTurmas; ?> </h1>
+                <p>Aulas da Semana</p>
+            </div>
+            <div class="info1">
+                <?php $resultado = mysqli_query($conexao, "SELECT * FROM professores");
+
+                $totalProfessores = mysqli_num_rows($resultado); ?>
+                <h1><?php echo $totalProfessores; ?></h1>
+                <p>Professores Cadastrados</p>
+            </div>
+            <div class="info1">
+                <?php $resultado = mysqli_query($conexao, "SELECT * FROM cursos");
+
+                $totalCursos = mysqli_num_rows($resultado); ?>
+                <h1><?php echo $totalCursos ?></h1>
+                <p>Cursos Cadastrados</p>
+            </div>
+        </div>
+        <div class="dividir">
+            <div class="noticias">
+                <h1 id="titulo">Próximas Aulas</h1>
+                <div class="noticia2">
+                    <h1>Informática Básica</h1>
+                    <p id="dia">Segunda - 19:00</p>
+                    <p id="teste">Sala 4</p>
+                </div>
+                <div class="noticia2">
+                    <h1>Lógica de Programação</h1>
+                    <p id="dia">Treça - 20:00</p>
+                    <p id="teste">Sala 2</p>
+                </div>
+                <div class="noticia2">
+                    <h1>Banco de Dados</h1>
+                    <p id="dia">Quarta - 18:30</p>
+                    <p id="teste">Sala 3</p>
+                </div>
+                <div class="ani">
+                    <h1 id="aniT">Próximos Aniversários</h1>
+                    <div class="ani1">
+                        <h1>Ana Júlia Santos</h1>
+                        <p>25/05 ° Turma INFO-01</p>
+                    </div>
+                    <div class="ani2">
+                        <h1>Lucas Ferreira</h1>
+                        <p id="ani2">27/05 ° Turma ADM-03</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

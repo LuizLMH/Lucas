@@ -15,7 +15,11 @@
     // Recebendo os dados do formulário
     $nome = $_POST['nome'];
     $senha = $_POST['senha'];
-
+if($nome=="" || $senha==""){
+    $_SESSION["erro"] = "Informe o usuário e a senha";
+    header("Location:index.php");
+    exit;
+}
     // Consultando o banco de dados
     $sql = "SELECT * FROM acesso WHERE nome = ?";
 

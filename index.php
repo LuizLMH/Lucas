@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,6 +12,11 @@
 </head>
 
 <body>
+    <?php
+    if (isset($_SESSION["erro"])) {
+        unset($_SESSION["erro"]);
+    }
+    ?>
     <div class="fundo">
         <div class="index">
             <div class="boxesquerda">
@@ -34,8 +42,8 @@
                             <input type="text" name="nome" id="nomeIndex" placeholder="Digite seu usuário" required>
                             <label for="senha">Senha</label>
                             <input type="password" name="senha" id="senhaIndex" placeholder="Digite sua senha" required>
-                            <input id="entrar" type="submit" value="Entrar">
-                            <a href="inicio.php">Início</a>
+                            <input id="entrar" type="submit" value="Acesso de Administrador">
+                            <input type="button" value="Acesso do Aluno" onclick="window.location.href='usuario.php'">
                         </form>
                     </div>
                 </div>

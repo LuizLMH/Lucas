@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION["nome"])) {
+    header("Location:index.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -23,7 +30,7 @@
         <a href="visualizarP.php" class="p10">Visualizar Professores</a>
         <a href="cadastrarC.php" class="p11">Cadastrar Cursos</a>
         <a href="visualizarC.php" class="p12">Visualizar Cursos</a>
-        <a href="index.php" id="sair">sair</a>
+        <a href="sair.php" id="sair">sair</a>
     </div>
     <h1>Cadastrar Aluno</h1>
     <div class="topo">
