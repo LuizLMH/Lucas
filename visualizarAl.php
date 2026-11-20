@@ -77,7 +77,7 @@ if (!isset($_SESSION["nome"])) {
                     </td>
                     <td>
                         <?php
-                        echo $linha["turma"];
+                        echo $linha["idturma"];
                         ?>
                     </td>
                     <td id="ativo">Ativo</td>

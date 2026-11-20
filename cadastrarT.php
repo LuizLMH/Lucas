@@ -77,13 +77,13 @@ if (!isset($_SESSION["nome"])) {
                     <option value="#">Selecione o professor</option>
                     <?php
                     include 'conecta.php';
-                    $sql = "SELECT nomeP FROM professores";
+                    $sql = "SELECT idProfessores,nomeP FROM professores";
                     // $nomeC=$_POST["nomeC"]
                     $resultado = mysqli_query($conexao, $sql);
                     if (mysqli_num_rows($resultado) > 0) {
                         while ($linha = mysqli_fetch_array($resultado)) {
                     ?>
-                            <option value="Nome"> <?php echo $linha['nomeP']; ?> </option>
+                            <option value="<?php echo $linha['idProfessores']; ?>"> <?php echo $linha['nomeP']; ?> </option>
                     <?php
                         }
                     }

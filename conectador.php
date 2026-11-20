@@ -3,7 +3,7 @@
 $servidor = "localhost";
 $banco = "escolaEM";
 $usuario = "root";
-$senha = "2003";
+$senha = "";
 
 $conexao = new PDO(
     "mysql:host=$servidor;dbname=$banco;charset=utf8mb4",

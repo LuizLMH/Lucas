@@ -21,12 +21,9 @@
     $cpf = $_POST["cpf"];
     $dataN = $_POST["dataN"];
     $telefone = $_POST["telefone"];
-    $bairro = $_POST["bairro"];
-    $endereco = $_POST["endereco"];
-    $numero = $_POST["numero"];
-    $cidade = $_POST["cidade"];
-    $turma = $_POST["select"];
-    $sql = "INSERT INTO alunos (nomeCompleto, dataNascimento, telefone, cpf, nomePai, nomeMae, turma) VALUES ('$nome', '$dataN', '$telefone', '$cpf', '$nomeP', '$nomeM', '$turma')";
+    $idturma = $_POST["turma"];
+    $idcurso = $_POST["curso"];
+    $sql = "INSERT INTO alunos (nomeCompleto, dataNascimento, telefone, cpf, nomePai, nomeMae, idturma, idcurso) VALUES ('$nome', '$dataN', '$telefone', '$cpf', '$nomeP', '$nomeM', $idturma, $idcurso)";
     if (mysqli_query($conexao, $sql)) {
     ?>
         <div class="inserirP">
