@@ -9,7 +9,7 @@ if (!isset($_SESSION["nome"])) {
 include 'conecta.php';
 if (isset($_GET["id"]) && is_numeric($_GET["id"])) {
     $id = $_GET["id"];
-    $sql = "SELECT * FROM alunos WHERE idAlunos=$id";
+    $sql = "SELECT * FROM aluno WHERE idAluno=$id";
     $resultado = mysqli_query($conexao, $sql);
     if (mysqli_num_rows($resultado) == 1) {
         $aluno = mysqli_fetch_array($resultado);
@@ -18,8 +18,8 @@ if (isset($_GET["id"]) && is_numeric($_GET["id"])) {
         exit;
     }
 } else {
-    echo "<h1>ID inválido<?h1>";
-    // exit;
+    echo "<h1>ID inválido</h1>";
+    exit;
 }
 ?>
 <!DOCTYPE html>
@@ -59,10 +59,9 @@ if (isset($_GET["id"]) && is_numeric($_GET["id"])) {
             <form action="atualizarAl.php" method="post">
                 <div class="cadpai">
                     <div class="cadT2">
-                        <input type="hidden" name="id" value="<?php echo $aluno["idAlunos"] ?>">
+                        <input type="hidden" name="id" value="<?php echo $aluno["idAluno"] ?>">
                         <label for="Nome">Nome completo</label>
-                        <input type="text" name="nome" id="Nome" value="<?php echo $aluno["nomeCompleto"]; ?>"
-                            required>
+                        <input type="text" name="nome" id="Nome" value="<?php echo $aluno["nomeCompleto"]; ?>" required>
                         <label for="Nome pai">Nome do pai</label>
                         <input type="text" name="pai" id="pai" value="<?php echo $aluno["nomePai"]; ?>" required>
                         <label for="Nome Mãe">Nome da mãe</label>
@@ -72,13 +71,15 @@ if (isset($_GET["id"]) && is_numeric($_GET["id"])) {
                             <option value="#">Selecione a Turma</option>
                             <?php
                             include 'conecta.php';
-                            $sql = "SELECT nomeTurma FROM turmas";
+                            $sql = "SELECT idturma, nomeT FROM turma";
                             // $nomeC=$_POST["nomeC"]
                             $resultado = mysqli_query($conexao, $sql);
                             if (mysqli_num_rows($resultado) > 0) {
                                 while ($linha = mysqli_fetch_array($resultado)) {
                                     ?>
-                                    <option value="<?php echo $linha['nomeTurma']; ?>"> <?php echo $linha['nomeTurma']; ?>
+                                    <option value="<?php echo $linha['idturma']; ?>" <?php if ($linha['idturma'] == $aluno['idturma'])
+                                           echo 'selected'; ?>>
+                                        <?php echo $linha['nomeT']; ?>
                                     </option>
                                     <?php
                                 }
@@ -97,16 +98,18 @@ if (isset($_GET["id"]) && is_numeric($_GET["id"])) {
                             required>
                         <label for="curso">Selecione o Curso</label>
                         <select name="curso" id="curso">
-                            <option value="#">Selecione o Curso</option>
+                            <option value="">Selecione o Curso</option>
                             <?php
                             include 'conecta.php';
-                            $sql = "SELECT idCursos, nomeC FROM cursos";
-                            // $nomeC=$_POST["nomeC"]
+                            $sql = "SELECT idCurso, nomeC FROM curso";
                             $resultado = mysqli_query($conexao, $sql);
                             if (mysqli_num_rows($resultado) > 0) {
                                 while ($linha = mysqli_fetch_array($resultado)) {
                                     ?>
-                                    <option value="<?php echo $linha['nomeC']; ?>"<?php if($aluno["idCurso"]==$linha['idCursos']) echo " selected";  ?>> <?php echo $linha['nomeC']; ?> </option>
+                                    <option value="<?php echo $linha['idCurso']; ?>" <?php if ($linha['idCurso'] == $aluno['idcurso'])
+                                           echo 'selected'; ?>>
+                                        <?php echo $linha['nomeC']; ?>
+                                    </option>
                                     <?php
                                 }
                             }

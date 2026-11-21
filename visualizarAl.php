@@ -46,6 +46,7 @@ if (!isset($_SESSION["nome"])) {
             <th>CPF </th>
             <th>Data nasc. </th>
             <th>Turma </th>
+            <th>Curso</th>
             <th>Status </th>
             <th>Ver Mais </th>
             <th>Alterar </th>
@@ -53,12 +54,12 @@ if (!isset($_SESSION["nome"])) {
         </tr>
         <?php
         include 'conecta.php';
-        $sql = "SELECT * FROM alunos";
+        $sql = "SELECT * FROM aluno,turma,curso WHERE aluno.idturma = turma.idturma AND turma.idcurso = curso.idCurso";
         $resultado = mysqli_query($conexao, $sql);
         if (mysqli_num_rows($resultado) > 0) {
             while ($linha = mysqli_fetch_array($resultado)) {
 
-        ?>
+                ?>
                 <tr>
                     <td>
                         <?php
@@ -77,7 +78,12 @@ if (!isset($_SESSION["nome"])) {
                     </td>
                     <td>
                         <?php
-                        echo $linha["idturma"];
+                        echo $linha["nomeT"];
+                        ?>
+                    </td>
+                    <td>
+                        <?php
+                        echo $linha["nomeC"];
                         ?>
                     </td>
                     <td id="ativo">Ativo</td>
@@ -86,17 +92,17 @@ if (!isset($_SESSION["nome"])) {
                             Ver mais
                         </button>
                     <td>
-                        <a class="edit" href=" alterarAl.php?id=<?php echo $linha['idAlunos']; ?>">Alterar</a>
+                        <a class="edit" href=" alterarAl.php?id=<?php echo $linha['idAluno']; ?>">Alterar</a>
                     </td>
                     <td>
-                        <a class="zero"
-                            href="excluirAl.php?idAlunos=<?php echo $linha['idAlunos']; ?>" onclick="return confirm('Tem certeza que deseja excluir este aluno?');">
+                        <a class="zero" href="excluirAl.php?idAluno=<?php echo $linha['idAluno']; ?>"
+                            onclick="return confirm('Tem certeza que deseja excluir este aluno?');">
                             Excluir
                         </a>
                     </td>
                     </td>
                 </tr>
-        <?php
+                <?php
             }
         }
         ?>

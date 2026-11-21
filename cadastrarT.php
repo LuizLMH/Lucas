@@ -54,13 +54,13 @@ if (!isset($_SESSION["nome"])) {
                     <option value="#">Selecione o Curso</option>
                     <?php
                     include 'conecta.php';
-                    $sql = "SELECT nomeC FROM cursos";
+                    $sql = "SELECT idCurso,nomeC FROM curso";
                     // $nomeC=$_POST["nomeC"]
                     $resultado = mysqli_query($conexao, $sql);
                     if (mysqli_num_rows($resultado) > 0) {
                         while ($linha = mysqli_fetch_array($resultado)) {
                     ?>
-                            <option value="Nome"> <?php echo $linha['nomeC']; ?> </option>
+                            <option value="<?php echo $linha['idCurso']; ?>"> <?php echo $linha['nomeC']; ?> </option>
                     <?php
                         }
                     }
@@ -77,20 +77,19 @@ if (!isset($_SESSION["nome"])) {
                     <option value="#">Selecione o professor</option>
                     <?php
                     include 'conecta.php';
-                    $sql = "SELECT idProfessores,nomeP FROM professores";
-                    // $nomeC=$_POST["nomeC"]
+                    $sql = "SELECT idProfessor,nomeP FROM professor";
                     $resultado = mysqli_query($conexao, $sql);
                     if (mysqli_num_rows($resultado) > 0) {
                         while ($linha = mysqli_fetch_array($resultado)) {
                     ?>
-                            <option value="<?php echo $linha['idProfessores']; ?>"> <?php echo $linha['nomeP']; ?> </option>
+                            <option value="<?php echo $linha['idProfessor']; ?>"> <?php echo $linha['nomeP']; ?> </option>
                     <?php
                         }
                     }
                     ?>
                 </select>
-                <label for="Sala">Sala</label>
-                <input type="number" id="Sala" name="Sala" placeholder="Sala" required>
+                <label for="sala">Sala</label>
+                <input type="number" id="sala" name="sala" placeholder="Sala" required>
             </div>
             <div class="send">
                 <input type="submit" value="Cadastrar Turma">

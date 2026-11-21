@@ -48,6 +48,7 @@ if (!isset($_SESSION["nome"])) {
                 <th>Data de Início</th>
                 <th>Data de Término</th>
                 <th>Professor</th>
+                <th>Curso</th>
                 <th>Status</th>
                 <th>Ver Mais </th>
                 <th>Editar </th>
@@ -55,27 +56,28 @@ if (!isset($_SESSION["nome"])) {
             </tr>
             <?php
             include 'conecta.php';
-            $sql = "SELECT * FROM turmas";
+            $sql = "SELECT * FROM turma, curso, professor WHERE turma.idcurso = curso.idCurso AND turma.idprofessor = professor.idProfessor";
             $resultado = mysqli_query($conexao, $sql);
             if (mysqli_num_rows($resultado) > 0) {
                 while ($linha = mysqli_fetch_array($resultado)) {
             ?>
                     <tr>
-                        <td><?php echo $linha["nomeTurma"]; ?> </td>
+                        <td><?php echo $linha["nomeT"]; ?> </td>
                         <td><?php echo $linha["turno"]; ?></td>
                         <td><?php echo $linha["inicio"]; ?> </td>
                         <td><?php echo $linha["termino"]; ?></td>
-                        <td><?php echo $linha["professor"]; ?></td>
+                        <td><?php echo $linha["nomeP"]; ?></td>
+                        <td><?php echo $linha["nomeC"]; ?></td>
                         <td id="ativo">Ativa</td>
                         <td>
                             <button type="button" id="mais">Ver Mais</button>
                         </td>
                         <td>
-                            <a class="edit" href=" alterarT.php?id=<?php echo $linha['idTurmas']; ?>">Alterar</a>
+                            <a class="edit" href=" alterarT.php?id=<?php echo $linha['idTurma']; ?>">Alterar</a>
                         </td>
                         <td>
                             <a class="zero"
-                                href="excluirT.php?idTurmas=<?php echo $linha['idTurmas']; ?>" onclick="return confirm('Tem certeza que deseja excluir este aluno?');">
+                                href="excluirT.php?idTurma=<?php echo $linha['idTurma']; ?>" onclick="return confirm('Tem certeza que deseja excluir este aluno?');">
                                 Excluir
                             </a>
                         </td>

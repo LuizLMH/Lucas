@@ -20,7 +20,7 @@
     $telefoneP = $_POST["telefoneP"];
     $cpfP = $_POST["cpfP"];
     $salario = $_POST["salario"];
-    $sql = "INSERT INTO professores (nomeP, dataNP, telefoneP, cpfP, salario) VALUES ('$nomeP', '$dataNP','$telefoneP', '$cpfP','$salario')";
+    $sql = "INSERT INTO professor (nomeP, dataNP, telefoneP, cpfP, salario) VALUES ('$nomeP', '$dataNP','$telefoneP', '$cpfP','$salario')";
     if (mysqli_query($conexao, $sql)) {
     ?>
         <div class="inserirP">

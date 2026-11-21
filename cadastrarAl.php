@@ -53,12 +53,12 @@ if (!isset($_SESSION["nome"])) {
                             <option value="#">Selecione a Turma</option>
                             <?php
                             include 'conecta.php';
-                            $sql = "SELECT idTurmas, nomeTurma FROM turmas";
+                            $sql = "SELECT idTurma, nomeT FROM turma";
                             $resultado = mysqli_query($conexao, $sql);
                             if (mysqli_num_rows($resultado) > 0) {
                                 while ($linha = mysqli_fetch_array($resultado)) {
                                     ?>
-                                    <option value="<?php echo $linha['idTurmas']; ?>"> <?php echo $linha['nomeTurma']; ?>
+                                    <option value="<?php echo $linha['idTurma']; ?>"> <?php echo $linha['nomeT']; ?>
                                     </option>
                                     <?php
                                 }
@@ -78,13 +78,13 @@ if (!isset($_SESSION["nome"])) {
                             <option value="#">Selecione o Curso</option>
                             <?php
                             include 'conecta.php';
-                            $sql = "SELECT idCursos, nomeC FROM cursos";
+                            $sql = "SELECT idCurso, nomeC FROM curso";
                             // $nomeC=$_POST["nomeC"]
                             $resultado = mysqli_query($conexao, $sql);
                             if (mysqli_num_rows($resultado) > 0) {
                                 while ($linha = mysqli_fetch_array($resultado)) {
                                     ?>
-                                    <option value="<?php echo $linha['idCursos']; ?>"> <?php echo $linha['nomeC']; ?> </option>
+                                    <option value="<?php echo $linha['idCurso']; ?>"> <?php echo $linha['nomeC']; ?> </option>
                                     <?php
                                 }
                             }

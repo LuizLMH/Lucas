@@ -36,7 +36,7 @@
             <div class="info1">
                 <?php
                 include 'conecta.php';
-                $resultado = mysqli_query($conexao, "SELECT * FROM alunos");
+                $resultado = mysqli_query($conexao, "SELECT * FROM aluno");
 
                 $totalPessoas = mysqli_num_rows($resultado);
                 ?>
@@ -48,28 +48,28 @@
                 <p>Alunos Ativos</p>
             </div>
             <div class="info1">
-                <?php $resultado = mysqli_query($conexao, "SELECT * FROM turmas");
+                <?php $resultado = mysqli_query($conexao, "SELECT * FROM turma");
 
                 $totalTurmas = mysqli_num_rows($resultado); ?>
                 <h1><?php echo $totalTurmas; ?></h1>
                 <p>Turmas Cadastrados</p>
             </div>
             <div class="info1">
-                <?php $resultado = mysqli_query($conexao, "SELECT * FROM turmas");
+                <?php $resultado = mysqli_query($conexao, "SELECT * FROM turma");
 
                 $totalTurmas = mysqli_num_rows($resultado); ?>
                 <h1> <?php echo $totalTurmas; ?> </h1>
                 <p>Aulas da Semana</p>
             </div>
             <div class="info1">
-                <?php $resultado = mysqli_query($conexao, "SELECT * FROM professores");
+                <?php $resultado = mysqli_query($conexao, "SELECT * FROM professor");
 
                 $totalProfessores = mysqli_num_rows($resultado); ?>
                 <h1><?php echo $totalProfessores; ?></h1>
                 <p>Professores Cadastrados</p>
             </div>
             <div class="info1">
-                <?php $resultado = mysqli_query($conexao, "SELECT * FROM cursos");
+                <?php $resultado = mysqli_query($conexao, "SELECT * FROM curso");
 
                 $totalCursos = mysqli_num_rows($resultado); ?>
                 <h1><?php echo $totalCursos ?></h1>

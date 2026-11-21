@@ -21,10 +21,11 @@
     $dataI = $_POST["dataI"];
     $dataT = $_POST["dataT"];
     $professor = $_POST["professor"];
-    // Continuar aqui  
-    $sql = "INSERT INTO turmas (nomeTurma, curso, turno, inicio,termino, professor) VALUES ('$nomeT', '$curso','$turno', '$dataI','$dataT', '$professor')";
+    $ano = $_POST["ano"]; 
+    $sala = $_POST["sala"];
+    $sql = "INSERT INTO turma (nomeT, idcurso, turno, inicio, termino, idprofessor, sala, ano) VALUES ('$nomeT', '$curso','$turno', '$dataI','$dataT', $professor, $sala, '$ano')";
     if (mysqli_query($conexao, $sql)) {
-    ?>
+        ?>
         <div class="inserirP">
             <div class="inserirF">
                 <?php
@@ -35,7 +36,7 @@
                 <a href="index.php" id="sair">Sair</a>
             </div>
         </div>
-    <?php
+        <?php
 
     } else {
         echo "erro ao inserir dados no sistema";

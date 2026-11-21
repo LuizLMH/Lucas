@@ -23,7 +23,7 @@
     $telefone = $_POST["telefone"];
     $idturma = $_POST["turma"];
     $idcurso = $_POST["curso"];
-    $sql = "INSERT INTO alunos (nomeCompleto, dataNascimento, telefone, cpf, nomePai, nomeMae, idturma, idcurso) VALUES ('$nome', '$dataN', '$telefone', '$cpf', '$nomeP', '$nomeM', $idturma, $idcurso)";
+    $sql = "INSERT INTO aluno (nomeCompleto, dataNascimento, telefone, cpf, nomePai, nomeMae, idturma, idcurso) VALUES ('$nome', '$dataN', '$telefone', '$cpf', '$nomeP', '$nomeM', $idturma, $idcurso)";
     if (mysqli_query($conexao, $sql)) {
     ?>
         <div class="inserirP">

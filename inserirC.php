@@ -17,7 +17,7 @@
     include 'conecta.php';
     $nomeC = $_POST["nomeC"];
     $cargaH = $_POST["cargaH"];
-    $sql = "INSERT INTO cursos (nomeC, cargaH) VALUES ('$nomeC', '$cargaH')";
+    $sql = "INSERT INTO curso (nomeC, cargaH) VALUES ('$nomeC', '$cargaH')";
     if (mysqli_query($conexao, $sql)) {
     ?>
         <div class="inserirP">

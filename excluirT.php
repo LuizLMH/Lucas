@@ -1,8 +1,8 @@
 <?php
 include 'conecta.php';
-if (isset($_GET["idTurmas"]) && is_numeric($_GET["idTurmas"])) {
-    $id = $_GET["idTurmas"];
-    $sql = "DELETE FROM turmas WHERE idTurmas = $id";
+if (isset($_GET["idTurma"]) && is_numeric($_GET["idTurma"])) {
+    $id = $_GET["idTurma"];
+    $sql = "DELETE FROM turma WHERE idTurma = $id";
     if (mysqli_query($conexao, $sql)) {
         echo "<h1>Turma excluida com sucesso!</h1>";
     } else {

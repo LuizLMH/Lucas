@@ -55,7 +55,7 @@ if (!isset($_SESSION["nome"])) {
             </tr>
             <?php
             include 'conecta.php';
-            $sql = "SELECT * FROM professores";
+            $sql = "SELECT * FROM professor";
             $resultado = mysqli_query($conexao, $sql);
             if (mysqli_num_rows($resultado) > 0) {
                 while ($linha = mysqli_fetch_array($resultado)) {
@@ -71,11 +71,11 @@ if (!isset($_SESSION["nome"])) {
                             <button type="button" id="mais">Ver Mais</button>
                         </td>
                         <td>
-                            <a class="edit" href=" alterarP.php?id=<?php echo $linha['idProfessores']; ?>">Alterar</a>
+                            <a class="edit" href=" alterarP.php?id=<?php echo $linha['idProfessor']; ?>">Alterar</a>
                         </td>
                         <td>
                             <a class="zero"
-                                href="excluirP.php?idProfessores=<?php echo $linha['idProfessores']; ?>" onclick="return confirm('Tem certeza que deseja excluir este aluno?');">
+                                href="excluirP.php?idProfessor=<?php echo $linha['idProfessor']; ?>" onclick="return confirm('Tem certeza que deseja excluir este aluno?');">
                                 Excluir
                             </a>
                         </td>
