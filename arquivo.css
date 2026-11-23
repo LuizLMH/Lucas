@@ -624,7 +624,7 @@ a {
 
 #dia {
     font-size: 25px;
-
+    color: black;
 }
 
 .ani {
@@ -1357,7 +1357,8 @@ label {
 /*Aqui é da página de "Esqueci a senha"*/
 #globo {
     background-image: url(escola.png);
-    background-size: 120%;
+    background-size: 100%;
+    background-position: cover;
     width: 100%;
     border-radius: 20px;
     background-repeat: no-repeat;

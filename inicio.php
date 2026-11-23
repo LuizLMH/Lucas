@@ -87,36 +87,27 @@ if (!isset($_SESSION["nome"])) {
         </div>
         <div class="dividir">
             <div class="noticias">
+                <?php
+                include 'conecta.php';
+                while($resultado = mysqli_query($conexao, "SELECT * FROM turma ")) {
+                $resultado = mysqli_query($conexao, "SELECT * FROM turma");
+                $nomeT = mysqli_fetch_assoc($resultado);
+                $inicio = mysqli_fetch_assoc($resultado);
+                $sala = mysqli_fetch_assoc($resultado);
+                ?>
                 <h1 id="titulo">Próximas Aulas</h1>
                 <div class="noticia2">
-                    <h1>Informática Básica</h1>
-                    <p id="dia">Segunda - 19:00</p>
-                    <p id="teste">Sala 4</p>
-                </div>
-                <div class="noticia2">
-                    <h1>Lógica de Programação</h1>
-                    <p id="dia">Treça - 20:00</p>
-                    <p id="teste">Sala 2</p>
-                </div>
-                <div class="noticia2">
-                    <h1>Banco de Dados</h1>
-                    <p id="dia">Quarta - 18:30</p>
-                    <p id="teste">Sala 3</p>
-                </div>
-                <div class="ani">
-                    <h1 id="aniT">Próximos Aniversários</h1>
-                    <div class="ani1">
-                        <h1>Ana Júlia Santos</h1>
-                        <p>25/05 ° Turma INFO-01</p>
-                    </div>
-                    <div class="ani2">
-                        <h1>Lucas Ferreira</h1>
-                        <p id="ani2">27/05 ° Turma ADM-03</p>
-                    </div>
+                    <h1><?php echo $nomeT['nomeT']; ?></h1>
+                    <p id="dia"><?php echo $inicio['inicio']; ?></p>
+                    <p id="teste"><?php echo "Sala " . $sala['sala']; ?></p>
                 </div>
             </div>
         </div>
+    </div>
+<?php
 
+}
+?>
 </body>
 
 </html>
