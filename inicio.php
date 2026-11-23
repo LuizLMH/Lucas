@@ -22,6 +22,8 @@ if (!isset($_SESSION["nome"])) {
         <div class="titulob">
             <h1 id="tb">Sistema</h1>
             <h1 id="to">Acadêmico</h1>
+            <a href="acesso.php" class="adm">Cadastrar Administrador</a>
+
         </div>
         <div class="pages">
             <a href="inicio.php" class="p2">Dashboard</a>
@@ -33,7 +35,6 @@ if (!isset($_SESSION["nome"])) {
             <a href="visualizarP.php" class="p10">Visualizar Professores</a>
             <a href="cadastrarC.php" class="p11">Cadastrar Cursos</a>
             <a href="visualizarC.php" class="p12">Visualizar Cursos</a>
-            <!-- <a href="acesso.php">Admin</a> -->
             <a href="index.php" id="sair">sair</a>
         </div>
         <div class="subtitle">

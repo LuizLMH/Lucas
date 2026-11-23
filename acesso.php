@@ -23,7 +23,8 @@ if (!isset($_SESSION["nome"])) {
                 <input type="text" name="nome" id="nome" placeholder="Digite seu nome de usuário" required>
                 <input type="password" name="senha" id="senha" placeholder="Crie sua senha" required>
                 <input type="submit" value="Confirmar">
-                <input type="reset" value="Cancelar">
+                <input type="reset" value="Limpar">
+                <a href="sair.php" class="bnt">Cancelar</a>
             </form>
         </div>
     </div>
