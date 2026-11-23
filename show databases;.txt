@@ -1,36 +1,39 @@
-show databases;
 create database escolaEM;
+
 use escolaEM;
-drop database escolaEM;
-create table cursos(
-idCursos int auto_increment primary key,
+
+create table curso(
+idCurso int auto_increment primary key,
 nomeC varchar(50) not null,
 cargaH varchar(50) not null
 );
-drop table cursos;
 
-create table turmas(
-idTurmas int auto_increment primary key,
-nomeTurma varchar(50) not null unique,
-curso varchar(50) not null,
+create table turma(
+idTurma int auto_increment primary key,
+nomeT varchar(50) not null unique,
+idcurso int not null,
 turno varchar(50) not null,
 inicio varchar(50) not null,
 termino varchar(50) not null,
-professor varchar(50) not null
+idprofessor int not null,
+sala int not null,	
+ano varchar(50) not null
 );
 
-create table alunos(
-idAlunos int auto_increment primary key,
+create table aluno(
+idAluno int auto_increment primary key,
 nomeCompleto varchar(100) not null,
 dataNascimento varchar(30) not null,
 telefone varchar(25) not null,
 cpf varchar(30) not null unique,
 nomePai varchar(100) not null,
 nomeMae varchar(100) not null,
-turma varchar(30) not null
+idturma int not null,
+idcurso int not null
 );
-create table professores(
-idProfessores int auto_increment primary key,
+
+create table professor(
+idProfessor int auto_increment primary key,
 nomeP varchar(100) not null,
 dataNP varchar(20) not null,
 telefoneP varchar(30) not null,
@@ -43,87 +46,3 @@ idAcesso int auto_increment primary key,
 nome varchar(500) not null unique,
 senha varchar(500) not null unique
 );
-drop table acesso;
-select *
-from acesso;
-
-
-
-
-
-
-
-
-
-
-show databases;drop database escolaem;show databases;
-create database escolaEM;
-use escolaEM;
-drop database escolaEM;
-create table
-  cursos(
-    idCursos int auto_increment primary key,
-    nomeC varchar(50) not null,
-    cargaH varchar(50) not null
-  );
-  select * 
-  from cursos;
-create table turmas(
-    idTurmas int auto_increment primary key,
-    nomeTurma varchar(50) not null unique,
-    curso varchar(50) not null,
-    turno varchar(50) not null,
-    inicio varchar(50) not null,
-    termino varchar(50) not null,
-    professor varchar(50) not null
-  );
-
-create table alunos(
-    idAlunos int auto_increment primary key,
-    nomeCompleto varchar(100) not null,
-    dataNascimento varchar(30) not null,
-    telefone varchar(25) not null,
-    cpf varchar(30) not null unique,
-    nomePai varchar(100) not null,
-    nomeMae varchar(100) not null,
-    idturma varchar(50) not null,
-    idcurso int not null
-  );
-  select*
-  from turmas;
-drop table alunos;
-create table professores(
-    idProfessores int auto_increment primary key,
-    nomeP varchar(100) not null,
-    dataNP varchar(20) not null,
-    telefoneP varchar(30) not null,
-    cpfP varchar(50) not null unique,
-    salario decimal(10, 2) not null
-  );
-
-   create table acesso(
-    idAcesso int Auto_increment primary key,
-    nome varchar(100) not null unique,
-    senha varchar(100) not null unique
-   );
-   select *
-   from acesso;
-   show databases;
-   use escolaphp;
-   create table usuarios(
-   id int auto_increment primary key,
-   nome varchar(50) not null,
-   usuario varchar(20) not null,
-   email varchar(50) not null,
-   senha varchar(255) not null
-   );
-   select * 
-   from usuarios;
-   show databases;
-   use escolaem;
-   show databases;
-   use escolaem;show tables;
-   select *
-   from alunos;
-   
-insert into usuarios values (1,'Administrador do Sistema','admin','administrador@sistema.com', '$2y$10$Acw4kNWoGV8MqcAtPZFUAejTVnHpY5GCdBF3DaMS3PQQzM1OXMMWy');
