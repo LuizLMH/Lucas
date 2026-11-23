@@ -71,7 +71,6 @@ if (isset($_GET["id"]) && is_numeric($_GET["id"])) {
                         <?php if ($turma['turno'] == 'Noite') echo 'selected'; ?>>Noite</option>
                     <option value="Integral"
                         <?php if ($turma['turno'] == 'Integral') echo 'selected'; ?>>Integral</option>
-</select>
                 </select>
                 <label for="curso">Selecione o Curso</label>
                 <select name="curso" id="curso">
@@ -105,7 +104,6 @@ if (isset($_GET["id"]) && is_numeric($_GET["id"])) {
                     <?php
                     include 'conecta.php';
                     $sql = "SELECT idprofessor, nomeP FROM professor";
-                    // $nomeC=$_POST["nomeC"]
                     $resultado = mysqli_query($conexao, $sql);
                     if (mysqli_num_rows($resultado) > 0) {
                         while ($linha = mysqli_fetch_array($resultado)) {

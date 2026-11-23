@@ -42,7 +42,7 @@ if($nome=="" || $senha==""){
         <div class="userP">
             <div class="userF">
             <?php
-            echo "<p>Usuário ou senha incorretos!<br><br>Redirecionando...</p>";
+            echo "<p>ACESSO AO SISTEMA NEGADO!<br><br></p>";
         }
             ?>
             <a href="index.php">Voltar para o início</a>

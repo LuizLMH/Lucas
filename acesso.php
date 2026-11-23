@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION["nome"])) {
+    header("Location:index.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,17 +16,17 @@
 </head>
 
 <body id="globo">
-        <div class="alinhar">
-            <div class="Ecentro">
-                <h1>Crie sua conta</h1>
-                <form action="inserirU.php" method="post">
-                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome de usuário" required>
-                    <input type="password" name="senha" id="senha" placeholder="Crie sua senha" required>
-                    <input type="submit" value="Confirmar">
-                    <input type="reset" value="Cancelar">
-                </form>
-            </div>
+    <div class="alinhar">
+        <div class="Ecentro">
+            <h1>Crie sua conta</h1>
+            <form action="inserirU.php" method="post">
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome de usuário" required>
+                <input type="password" name="senha" id="senha" placeholder="Crie sua senha" required>
+                <input type="submit" value="Confirmar">
+                <input type="reset" value="Cancelar">
+            </form>
         </div>
+    </div>
 </body>
 
 </html>
