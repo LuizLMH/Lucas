@@ -89,7 +89,6 @@ if (!isset($_SESSION["nome"])) {
             <div class="noticias">
                 <?php
                 include 'conecta.php';
-                while($resultado = mysqli_query($conexao, "SELECT * FROM turma ")) {
                 $resultado = mysqli_query($conexao, "SELECT * FROM turma");
                 $nomeT = mysqli_fetch_assoc($resultado);
                 $inicio = mysqli_fetch_assoc($resultado);
@@ -106,7 +105,7 @@ if (!isset($_SESSION["nome"])) {
     </div>
 <?php
 
-}
+
 ?>
 </body>
 
