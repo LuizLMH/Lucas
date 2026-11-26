@@ -19,6 +19,7 @@ if (!isset($_SESSION["nome"])) {
     <div class="titulob">
         <h1 id="tb">Sistema</h1>
         <h1 id="to">Acadêmico</h1>
+        <h1 id="jls">𝑱𝑳𝑺</h1>
     </div>
     <div class="pages4">
         <a href="inicio.php" class="p2">Dashboard</a>
@@ -59,7 +60,7 @@ if (!isset($_SESSION["nome"])) {
         if (mysqli_num_rows($resultado) > 0) {
             while ($linha = mysqli_fetch_array($resultado)) {
 
-                ?>
+        ?>
                 <tr>
                     <td>
                         <?php
@@ -102,7 +103,7 @@ if (!isset($_SESSION["nome"])) {
                     </td>
                     </td>
                 </tr>
-                <?php
+        <?php
             }
         }
         ?>

@@ -25,6 +25,10 @@ session_start();
                         Sistema de Gestão Acadêmica
                     </h1>
                     <br>
+                    <div class="curvada">
+                        <h1 id="jlsi">𝑱𝑳𝑺</h1>
+
+                    </div>
                     <p id="cor">Gerêncie alunos, turmas, professores e acompanhe as principais informações do sistema de forma
                         prática,
                         organizada e moderna.</p>
@@ -37,7 +41,7 @@ session_start();
                         <h4 class="textoi2">Informe seus dados para acessar o sistema</h4>
                     </div>
                     <div class="formIndex">
-                        <form action="validarU.php" method="post">
+                        <form action="validarU.php" method="post" autocomplete="off">
                             <label for="nome">Nome de Usuário</label>
                             <input type="text" name="nome" id="nomeIndex" placeholder="Digite seu usuário" required>
                             <label for="senha">Senha</label>

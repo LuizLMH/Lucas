@@ -19,6 +19,7 @@ if (!isset($_SESSION["nome"])) {
     <div class="titulob">
         <h1 id="tb">Sistema</h1>
         <h1 id="to">Acadêmico</h1>
+        <h1 id="jls">𝑱𝑳𝑺</h1>
     </div>
     <div class="pages3">
         <a href="inicio.php" class="p2">Dashboard</a>
@@ -57,10 +58,10 @@ if (!isset($_SESSION["nome"])) {
                             $resultado = mysqli_query($conexao, $sql);
                             if (mysqli_num_rows($resultado) > 0) {
                                 while ($linha = mysqli_fetch_array($resultado)) {
-                                    ?>
+                            ?>
                                     <option value="<?php echo $linha['idTurma']; ?>"> <?php echo $linha['nomeT']; ?>
                                     </option>
-                                    <?php
+                            <?php
                                 }
                             }
                             ?>
@@ -83,9 +84,9 @@ if (!isset($_SESSION["nome"])) {
                             $resultado = mysqli_query($conexao, $sql);
                             if (mysqli_num_rows($resultado) > 0) {
                                 while ($linha = mysqli_fetch_array($resultado)) {
-                                    ?>
+                            ?>
                                     <option value="<?php echo $linha['idCurso']; ?>"> <?php echo $linha['nomeC']; ?> </option>
-                                    <?php
+                            <?php
                                 }
                             }
                             ?>

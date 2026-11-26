@@ -22,6 +22,10 @@ if (!isset($_SESSION["nome"])) {
         <div class="titulob">
             <h1 id="tb">Sistema</h1>
             <h1 id="to">Acadêmico</h1>
+            <h1 id="jls">𝑱𝑳𝑺</h1>
+            <br>
+            <br>
+            <br><br>
             <a href="acesso.php" class="adm">Cadastrar Administrador</a>
 
         </div>
@@ -87,26 +91,40 @@ if (!isset($_SESSION["nome"])) {
         </div>
         <div class="dividir">
             <div class="noticias">
-                <?php
-                include 'conecta.php';
-                $resultado = mysqli_query($conexao, "SELECT * FROM turma");
-                $nomeT = mysqli_fetch_assoc($resultado);
-                $inicio = mysqli_fetch_assoc($resultado);
-                $sala = mysqli_fetch_assoc($resultado);
-                ?>
                 <h1 id="titulo">Próximas Aulas</h1>
-                <div class="noticia2">
-                    <h1><?php echo $nomeT['nomeT']; ?></h1>
-                    <p id="dia"><?php echo $inicio['inicio']; ?></p>
-                    <p id="teste"><?php echo "Sala " . $sala['sala']; ?></p>
-                </div>
+                <?php
+                    $sql = "SELECT * FROM turma;";
+                    $resultado = mysqli_query($conexao, $sql);
+                if (mysqli_num_rows($resultado) > 0) {
+                    while ($nomeT = mysqli_fetch_array($resultado)) {
+                ?>
+                        <div class="noticia2">
+                            <h1><?php echo $nomeT['nomeT']; ?></h1>
+                            <p id="dia"><?php echo $nomeT['inicio']; ?></p>
+                            <p id="teste"><?php echo "Sala " . $nomeT['sala']; ?></p>
+                        </div>
             </div>
+            <br><br><br>
         </div>
     </div>
 <?php
-
+                    }
+                } else {
+                    echo "<h1 id='registro'>Sem registros de aulas ou turmas encontrados</h1>";
+                }
 
 ?>
+<div class="ani">
+    <h1 id="aniT">Próximos Aniversários</h1>
+    <div class="ani1">
+        <h1>Ana Júlia Santos</h1>
+        <p>25/05 ° Turma INFO-01</p>
+    </div>
+    <div class="ani2">
+        <h1>Lucas Ferreira</h1>
+        <p id="ani2">27/05 ° Turma ADM-03</p>
+    </div>
+</div>
 </body>
 
 </html>
