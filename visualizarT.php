@@ -36,7 +36,7 @@ if (!isset($_SESSION["nome"])) {
     <div class="verturmas">
         <h1>Visualizar Turmas</h1>
         <p>Lista de Turmas Cadastradas no Sistema</p>
-        <form action="pesqisa.html" method="get">
+        <form action="pesqisa.html" method="get"  onclick="return confirm('Ação ainda não disponível!')">
             <input type="search" name="pesquisa" placeholder="pesquisar Turma...">
             <input type="submit" value="pesquisar">
         </form>
@@ -71,7 +71,7 @@ if (!isset($_SESSION["nome"])) {
                         <td><?php echo $linha["nomeC"]; ?></td>
                         <td id="ativo">Ativa</td>
                         <td>
-                            <button type="button" id="mais">Ver Mais</button>
+                            <button type="button"  onclick="return confirm('Ação ainda não disponível!')"  id="mais">Ver Mais</button>
                         </td>
                         <td>
                             <a class="edit" href=" alterarT.php?id=<?php echo $linha['idTurma']; ?>">Alterar</a>

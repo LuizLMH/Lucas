@@ -1,32 +1,54 @@
-
 <?php
 if (!isset($_POST["nome"])) {
     header("Location: acesso.php");
     exit();
 }
-
+?>
+<?php
 include 'conecta.php';
 
 $nome = $_POST["nome"];
 $senha = $_POST["senha"];
 
-// Criptografando a senha
-$senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+$cadastrado = false;
+$duplicado = false;
 
-// Preparando a inserção
-$sql = "INSERT INTO acesso (nome, senha) VALUES (?, ?)";
+// Verificando se o usuário já existe
+$sql = "SELECT nome FROM acesso WHERE nome = ?";
 
 $stmt = mysqli_prepare($conexao, $sql);
+mysqli_stmt_bind_param($stmt, "s", $nome);
+mysqli_stmt_execute($stmt);
 
-mysqli_stmt_bind_param($stmt, "ss", $nome, $senhaHash);
+$resultado = mysqli_stmt_get_result($stmt);
 
-if (mysqli_stmt_execute($stmt)) {
-    $cadastrado = true;
+if (mysqli_num_rows($resultado) > 0) {
+
+    $duplicado = true;
+    mysqli_stmt_close($stmt);
+
 } else {
-    $cadastrado = false;
-}
 
-mysqli_stmt_close($stmt);
+    mysqli_stmt_close($stmt);
+
+    // Gerando o hash da senha
+    $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+
+    // Preparando a inserção
+    $sql = "INSERT INTO acesso (nome, senha) VALUES (?, ?)";
+
+    $stmt = mysqli_prepare($conexao, $sql);
+
+    mysqli_stmt_bind_param($stmt, "ss", $nome, $senhaHash);
+
+    if (mysqli_stmt_execute($stmt)) {
+        $cadastrado = true;
+    } else {
+        $cadastrado = false;
+    }
+
+    mysqli_stmt_close($stmt);
+}
 ?>
 
 <!DOCTYPE html>
@@ -55,11 +77,14 @@ mysqli_stmt_close($stmt);
             </div>
         </div>
 
-    <?php } else { ?>
+    <?php } else {
+    header("refresh:2;url=acesso.php");
+         ?>
 
-        <p>Erro ao inserir dados no sistema.</p>
+        <p>Usuário já existente. Retornando ao cadastro...</p>
 
     <?php } ?>
 
 </body>
+
 </html>

@@ -35,10 +35,10 @@ if (!isset($_SESSION["nome"])) {
     </div>
     <h1>Visualizar Aluno</h1>
     <p id="t">Lista de alunos cadastrados no sistema</p>
-    <div class="pesquisa2">
-        <form action="pagina4.html" method="get">
+    <div class="verturmas">
+        <form action="pagina4.html" method="get" onclick="return confirm('Ação ainda não disponível!')">
             <input type="search" id="busca" name="achar" placeholder="Pesquisar Aluno...">
-            <input type="button" value="Novo Aluno">
+            <input type="submit" value="Pesquisar Aluno">
         </form>
     </div>
     <table>
@@ -89,7 +89,7 @@ if (!isset($_SESSION["nome"])) {
                     </td>
                     <td id="ativo">Ativo</td>
                     <td>
-                        <button onclick="window.location.href='detalhes.php'" id="mais">
+                        <button onclick="return confirm('Ação ainda não disponível!')" id="mais">
                             Ver mais
                         </button>
                     <td>

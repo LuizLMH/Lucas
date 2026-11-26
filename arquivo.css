@@ -26,6 +26,10 @@ body {
     margin-top: 2%;
 }
 
+#breve{
+    color: rgb(1, 150, 170);
+}
+
 .adm {
     text-decoration: underline;
     text-decoration-color: transparent;
@@ -56,11 +60,12 @@ body {
     color: rgb(1, 150, 170);
     text-align: center;
     font-size: 150px;
+    margin-top: 1%;
     text-shadow: 0 0 10px white;
     border-top: 5px solid white;
     border-bottom: 5px solid white;
     box-shadow: 0 0 20px white;
-    border-radius: 20px;
+    border-radius: 50px;
 }
 
 .pages {
@@ -173,9 +178,8 @@ p {
 
 .iniciocentro p {
     color: white;
-    margin-top: 20px;
     text-align: left;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .direita {
@@ -676,7 +680,9 @@ a {
     box-shadow: 0 0 20px;
     transform: scale(1.001);
 }
-
+.ani1 h1, p{
+    color: rgb(1, 150, 170);
+}
 .ani1,
 .ani2 {
     transition: all 0.5s ease;
@@ -689,10 +695,6 @@ a {
 }
 
 .ani1:hover {
-    box-shadow: 0 0 20px rgb(230, 48, 230);
-}
-
-.ani2:hover {
     box-shadow: 0 0 20px rgb(50, 128, 192);
 }
 

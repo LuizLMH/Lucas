@@ -22,7 +22,7 @@
         </div>
         <div class="subtitle">
             <h1>Bem-vindo ao Sistema acadêmico</h1>
-            <p>Gerêncie alunos, turmas, professores e acompanhe os principais indicadores da instituição</p>
+            <p>Aqui, você aluno pode companhar os principais indicadores da instituição</p>
         </div>
         <div class="informacoes">
             <div class="info1">
@@ -71,34 +71,37 @@
         <div class="dividir">
             <div class="noticias">
                 <h1 id="titulo">Próximas Aulas</h1>
-                <div class="noticia2">
-                    <h1>Informática Básica</h1>
-                    <p id="dia">Segunda - 19:00</p>
-                    <p id="teste">Sala 4</p>
-                </div>
-                <div class="noticia2">
-                    <h1>Lógica de Programação</h1>
-                    <p id="dia">Treça - 20:00</p>
-                    <p id="teste">Sala 2</p>
-                </div>
-                <div class="noticia2">
-                    <h1>Banco de Dados</h1>
-                    <p id="dia">Quarta - 18:30</p>
-                    <p id="teste">Sala 3</p>
-                </div>
-                <div class="ani">
-                    <h1 id="aniT">Próximos Aniversários</h1>
-                    <div class="ani1">
-                        <h1>Ana Júlia Santos</h1>
-                        <p>25/05 ° Turma INFO-01</p>
-                    </div>
-                    <div class="ani2">
-                        <h1>Lucas Ferreira</h1>
-                        <p id="ani2">27/05 ° Turma ADM-03</p>
-                    </div>
-                </div>
+                <?php
+                    $sql = "SELECT * FROM turma;";
+                    $resultado = mysqli_query($conexao, $sql);
+                if (mysqli_num_rows($resultado) > 0) {
+                    while ($nomeT = mysqli_fetch_array($resultado)) {
+                ?>
+                        <div class="noticia2">
+                            <h1><?php echo $nomeT['nomeT']; ?></h1>
+                            <p id="dia"><?php echo $nomeT['inicio']; ?></p>
+                            <p id="teste"><?php echo "Sala " . $nomeT['sala']; ?></p>
+                        </div>
             </div>
+            <br><br><br>
         </div>
+    </div>
+<?php
+                    }
+                } else {
+                    echo "<h1 id='registro'>Sem registros de aulas ou turmas encontrados</h1>";
+                }
+
+?>
+<div class="ani">
+<?php
+echo "<h1 id='breve'>Disponível nas próximas atualizações</h1>";
+?>
+    <h1 id="aniT">Próximos Aniversários</h1>
+    <div class="ani1">
+        <h1>Nome do Aluno</h1>
+        <p>Data de Aniversário</p>
+    </div>
 
 </body>
 

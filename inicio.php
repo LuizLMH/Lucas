@@ -115,14 +115,13 @@ if (!isset($_SESSION["nome"])) {
 
 ?>
 <div class="ani">
+<?php
+echo "<h1 id='breve'>Disponível nas próximas atualizações</h1>";
+?>
     <h1 id="aniT">Próximos Aniversários</h1>
     <div class="ani1">
-        <h1>Ana Júlia Santos</h1>
-        <p>25/05 ° Turma INFO-01</p>
-    </div>
-    <div class="ani2">
-        <h1>Lucas Ferreira</h1>
-        <p id="ani2">27/05 ° Turma ADM-03</p>
+        <h1>Nome do Aluno</h1>
+        <p>Data de Aniversário</p>
     </div>
 </div>
 </body>
