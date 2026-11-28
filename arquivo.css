@@ -1651,7 +1651,7 @@ label {
     height: 70px;
     border-radius: 100px 30px 100px;
     box-shadow: 0 0 10px rgb(1, 150, 170);
-    background-color: red;
+    background-color: rgb(0, 124, 155);
     animation: carregar2 1s linear infinite reverse;
 }
 

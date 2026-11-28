@@ -78,7 +78,7 @@ if (mysqli_num_rows($resultado) > 0) {
         </div>
 
     <?php } else {
-    header("refresh:3;url=acesso.php");
+    header("refresh:200;url=acesso.php");
          ?>
 
         <p id="carregar">Usuário já existente. Retornando ao cadastro...</p>
