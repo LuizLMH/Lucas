@@ -78,10 +78,14 @@ if (mysqli_num_rows($resultado) > 0) {
         </div>
 
     <?php } else {
-    header("refresh:2;url=acesso.php");
+    header("refresh:3;url=acesso.php");
          ?>
 
-        <p>Usuário já existente. Retornando ao cadastro...</p>
+        <p id="carregar">Usuário já existente. Retornando ao cadastro...</p>
+        <div class="carregarP">
+            <div class="carregarF"></div>
+            <div class="carregarF2"></div>
+        </div>
 
     <?php } ?>
 

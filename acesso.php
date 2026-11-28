@@ -20,7 +20,7 @@ if (!isset($_SESSION["nome"])) {
         <div class="Ecentro">
             <h1>Crie sua conta</h1>
             <form action="inserirU.php" method="post">
-                <input type="text" name="nome" id="nome" placeholder="Digite seu nome de usuário" required>
+                <input type="text" name="nome" id="senha" placeholder="Digite seu nome de usuário" required>
                 <input type="password" name="senha" id="senha" placeholder="Crie sua senha" required>
                 <input type="submit" value="Confirmar">
                 <input type="reset" value="Limpar">

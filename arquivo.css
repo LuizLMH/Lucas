@@ -1493,6 +1493,15 @@ label {
     transition: all 1s ease;
 }
 
+.Ecentro input[type="text"]:not(:placeholder-shown) {
+    border-color: rgb(1, 150, 170);
+    background: linear-gradient(45deg, rgb(34, 210, 233), white, rgb(34, 210, 233));
+    background-size: 300% 300%;
+    animation: gradient 3.4s linear infinite alternate;
+    transition: all 1s ease;
+}
+
+
 .Ecentro input[type="password"]:focus {
     border-color: gray;
     box-shadow: 0 0 20px rgb(1, 150, 170);
@@ -1504,6 +1513,9 @@ label {
 }
 
 .Ecentro input[type="password"]:focus::placeholder {
+    color: rgb(1, 150, 170);
+}
+.Ecentro input[type="text"]:focus::placeholder {
     color: rgb(1, 150, 170);
 }
 
@@ -1602,4 +1614,66 @@ label {
     margin-left: 0;
     text-align: center;
     color: red;
+}
+
+#carregar{
+    min-height: 80vh;
+    display: grid;
+    place-items: center;
+}
+
+.carregarP{
+    display: grid;
+    place-items: center;
+}
+
+.carregarF{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -30%;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px 30px 100px;
+    box-shadow: 0 0 10px rgb(1, 150, 170);
+    background-color: rgb(92, 216, 247);
+    animation: carregar 1s linear infinite;
+}
+
+.carregarF2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -30%;
+    width: 70px;
+    height: 70px;
+    border-radius: 100px 30px 100px;
+    box-shadow: 0 0 10px rgb(1, 150, 170);
+    background-color: red;
+    animation: carregar2 1s linear infinite reverse;
+}
+
+@keyframes carregar {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes carregar2 {
+    
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+    
 }
